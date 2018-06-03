@@ -16,46 +16,70 @@
                 position: absolute;
                 bottom: 0;
             }
+
           </style>
     </head>
     <body>
-        <div id="app">
-            <h1>Github repos</h1>
-            
-            <div class="mdl-grid">
-                <div v-if="errored">
-                    <p>Error!</p>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">Repositories</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation. We hide it in small screens. -->
+                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                        <a class="mdl-navigation__link" href="https://yuk7.github.io">Home</a>
+                        <a class="mdl-navigation__link" href="https://yuk7.github.io/repos.html">Repositories</a>
+                    </nav>
                 </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">Title</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="https://yuk7.github.io">Home</a>
+                    <a class="mdl-navigation__link" href="https://yuk7.github.io/repos.html">Repositories</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content">
+                <div id="app" class="page-content">
+                    <h1>Github repos</h1>
+            
+                    <div class="mdl-grid">
+                        <div v-if="errored">
+                            <p>Error!</p>
+                        </div>
 
-                <div v-else class="mdl-grid">
-                    <div v-if="loading">Loading...</div>
-                    <div v-else v-for="repo in orderedRepos" class="mdl-layout-spacer">
-                        <div class="mdl-card mdl-shadow--2dp repo-card">
-                            <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text">{{ repo.name }}</h2>
-                            </div>
-                            <div class="mdl-card__supporting-text">
-                                <p>{{ repo.description }}</p>
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" :href="repo.html_url">
-                                    View on Github
-                                </a>
-                            </div>
-                            <div class="mdl-card__menu">
-                                <div>
-                                    <i class="material-icons">star</i>
-                                    <span v-html="repo.stargazers_count"></span>
+                        <div v-else class="mdl-grid">
+                            <div v-if="loading">Loading...</div>
+                            <div v-else v-for="repo in orderedRepos" class="mdl-layout-spacer">
+                                <div class="mdl-card mdl-shadow--2dp repo-card">
+                                    <div class="mdl-card__title">
+                                        <h2 class="mdl-card__title-text">{{ repo.name }}</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        <p>{{ repo.description }}</p>
+                                    </div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" :href="repo.html_url">
+                                            View on Github
+                                        </a>
+                                    </div>
+                                    <div class="mdl-card__menu">
+                                        <div>
+                                            <i class="material-icons">star</i>
+                                            <span v-html="repo.stargazers_count"></span>
+                                        </div>
+                                    </div>
                                 </div>
+                                <p></p>
                             </div>
                         </div>
-                        <p></p>
-                    </div>
 
+                    </div>
                 </div>
-            </div>
-        </div>
-            
+            </main>
+        </div>    
 
             <script>
                 new Vue({
