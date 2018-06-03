@@ -2,6 +2,7 @@
     <head>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
 
     </head>
     <body>
@@ -14,7 +15,7 @@
                   
             <section v-else>
             <div v-if="loading">Loading...</div>
-                <div v-else v-for="repo in repos" class="repo">
+                <div v-else v-for="repo in orderedRepos" class="repo">
                     {{ repo.name }}:
                     <span class="lighten">
                         <span v-html="repo.stargazers_count"></span>
@@ -32,6 +33,11 @@
                         repos: null,
                         loading: true,
                         errored: false
+                    }
+                },
+                computed: {
+                    orderedRepos: function () {
+                        return _.orderBy(this.repos, 'stargazers_count','desc')
                     }
                 },
                 mounted () {
