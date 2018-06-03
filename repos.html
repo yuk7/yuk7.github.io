@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    </head>
+    <body>
+        <div id="app">
+            <h1>Github repos</h1>
+                  
+            <section v-if="errored">
+                <p>Error!</p>
+            </section>
+                  
+            <section v-else>
+            <div v-if="loading">Loading...</div>
+                <div v-else v-for="repo in repos" class="repo">
+                    {{ repo.name }}:
+                    <span class="lighten">
+                        <span v-html="repo.stargazers_count"></span>
+                    </span>
+                </div>
+          
+            </section>
+            </div>
+
+            <script>
+                new Vue({
+                el: '#app',
+                data () {
+                    return {
+                        repos: null,
+                        loading: true,
+                        errored: false
+                    }
+                },
+                mounted () {
+                    axios
+                    .get('https://api.github.com/users/yuk7/repos?sort=updated')
+                    .then(response => {
+                        this.repos = response.data
+                    })
+                    .catch(error => {
+                        console.log(error)
+                        this.errored = true
+                    })
+                    .finally(() => this.loading = false)
+                }
+            })
+        </script>
+    </body>
+</html>
