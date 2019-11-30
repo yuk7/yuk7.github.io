@@ -1,6 +1,37 @@
 <template>
 <div id="app">
-  <p>Hello App!</p>
+  <v-card>
+    <v-toolbar flat>
+      <v-toolbar-title>yuk7.github.io</v-toolbar-title>
+
+      <template v-slot:extension>
+        <v-tabs
+          v-model="tabs"
+          fixed-tabs
+          icons-and-text
+        >
+          <v-tabs-slider></v-tabs-slider>
+
+          <v-tab  to="/">
+            Home
+            <v-icon>mdi-home</v-icon>
+          </v-tab>
+
+          <v-tab  to="/repos">
+            Repositories
+            <v-icon>mdi-github-circle</v-icon>
+          </v-tab>
+
+          <v-tab href="https://yuk7.github.io/StartPage">
+            Start Page
+            <v-icon>mdi-console</v-icon>
+          </v-tab>
+        </v-tabs>
+
+      </template>
+    </v-toolbar>
+  </v-card>
+
   <router-view></router-view>
 </div>
 </template>
