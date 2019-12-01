@@ -33,7 +33,7 @@ import _ from "lodash";
         return _.orderBy(this.repos, 'stargazers_count','desc');
       }
     },
-    mounted() {
+    created() {
       axios
         .get('https://api.github.com/users/yuk7/repos?sort=updated')
         .then(response => {
