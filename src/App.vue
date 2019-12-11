@@ -6,7 +6,6 @@
 
       <template v-slot:extension>
         <v-tabs
-          v-model="tabs"
           fixed-tabs
           icons-and-text
         >
