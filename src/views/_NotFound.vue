@@ -15,7 +15,7 @@
 
 <style>
     .nfpage {
-        height: 60vh;
+        height: 40vh;
     }
 
     .card {
