@@ -1,6 +1,6 @@
 <template>
 <div class="nfpage">
-    <v-card min-width="270px">
+    <v-card max-width="600px" class="card">
         <v-card-title>Page Not found<span>:(</span></v-card-title>
         <v-card-text class="text--primary">
             <div>The page you're looking for can't be found.</div>
@@ -15,10 +15,11 @@
 
 <style>
     .nfpage {
-        position: absolute;
+        height: 60vh;
+    }
+
+    .card {
         top: 50%;
-        left: 50%;
-        -webkit-transform: translateY(-50%) translateX(-50%);
-        transform: translateY(-50%) translateX(-50%);
+        margin: 10px auto;
     }
 </style>
