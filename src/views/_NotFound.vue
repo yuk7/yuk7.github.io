@@ -1,5 +1,5 @@
 <template>
-<div class="nfpage">
+<v-container class="nfpage">
     <v-card max-width="600px" class="card">
         <v-card-title>Page Not found<span>:(</span></v-card-title>
         <v-card-text class="text--primary">
@@ -10,7 +10,7 @@
             <v-btn text to="/">Go to Top</v-btn>
         </v-card-actions>
     </v-card>
-</div>
+</v-container>
 </template>
 
 <style>
