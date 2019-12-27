@@ -1,3 +1,29 @@
 <template>
-  <h1>Hello world!</h1>
+<v-container>
+  <v-card
+  class="mx-auto"
+  outlined
+  >
+    <v-list-item three-line>
+      <v-list-item-content>
+        <h2>yuk7</h2>
+        <p><v-icon>mdi-cake-variant</v-icon>Jan. 2000 / 19y.o.</p>
+        <p><v-icon>mdi-city</v-icon>Japan</p>
+        <p> <v-icon>mdi-heart</v-icon> Linux/Android Udon/Chocolate/Mint</p>
+        <p> <v-icon>mdi-code-braces</v-icon> C#/Java/Kotlin/PHP/JavaScript</p>
+      </v-list-item-content>
+
+      <v-avatar class="profile" color="grey" size="20%" >
+      <v-img src="https://avatars2.githubusercontent.com/u/29954265" max-width="200px"></v-img>
+      </v-avatar>
+    </v-list-item>
+
+      
+
+    <v-card-actions>
+      <v-btn text href="mailto:yukx00@gmail.com"><v-icon>mdi-email</v-icon>yukx00@gmail.com</v-btn>
+      <v-btn text href="https://keybase.io/yuk7"><v-icon>mdi-message</v-icon>keybase</v-btn>
+    </v-card-actions>
+  </v-card>
+</v-container>
 </template>
