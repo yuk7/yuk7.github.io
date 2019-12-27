@@ -18,11 +18,10 @@
       </v-avatar>
     </v-list-item>
 
-      
-
     <v-card-actions>
-      <v-btn text href="mailto:yukx00@gmail.com"><v-icon>mdi-email</v-icon>yukx00@gmail.com</v-btn>
-      <v-btn text href="https://keybase.io/yuk7"><v-icon>mdi-message</v-icon>keybase</v-btn>
+      <v-btn icon href="mailto:yukx00@gmail.com"><v-icon>mdi-email</v-icon></v-btn>
+      <v-btn icon href="https://keybase.io/yuk7"><v-icon>fab fa-keybase</v-icon></v-btn>
+      <v-btn icon href="bitcoin:1BJMbHUM1nf7RvbouNfjVcrbgRm7CoYnzx"><v-icon>fab fa-bitcoin</v-icon></v-btn>
     </v-card-actions>
   </v-card>
 </v-container>
