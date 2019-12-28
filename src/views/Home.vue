@@ -7,8 +7,8 @@
     <v-list-item three-line>
       <v-list-item-content>
         <h2>yuk7</h2>
-        <p><v-icon>mdi-cake-variant</v-icon>Jan. 2000 / 19y.o.</p>
-        <p><v-icon>mdi-city</v-icon>Japan</p>
+        <p><v-icon>mdi-cake-variant</v-icon> Jan. 2000 / 19y.o.</p>
+        <p><v-icon>mdi-city</v-icon> Japan</p>
         <p> <v-icon>mdi-heart</v-icon> Linux/Android Udon/Chocolate/Mint</p>
         <p> <v-icon>mdi-code-braces</v-icon> C#/Java/Kotlin/PHP/JavaScript</p>
       </v-list-item-content>
