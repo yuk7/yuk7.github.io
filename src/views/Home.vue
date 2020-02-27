@@ -1,7 +1,6 @@
 <template>
   <v-container>
-    <v-layout justify-center>
-      <v-card outlined max-width="800px">
+      <v-card class="mx-auto" outlined max-width="800px">
         <v-list-item three-line>
           <v-list-item-content>
             <h2>yuk7</h2>
@@ -83,7 +82,6 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
-    </v-layout>
   </v-container>
 </template>
 
@@ -97,3 +95,9 @@
     }
   }
 </script>
+
+<style>
+  .mx-auto {
+      margin: 10px auto;
+  }
+</style>
