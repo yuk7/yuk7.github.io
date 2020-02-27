@@ -16,16 +16,16 @@ jobs:
       with:
         node-version: '13.x'
     - name: Build
-      run:
+      run: |
         npm install
         npm run build
     - name: Setup Git
-      run:
+      run: |
         git config --global user.name "bot"
-        git config --global user.name ${{secrets.ACTIONS_EMAIL}}
+        git config --global user.email "${{secrets.ACTIONS_EMAIL}}"
     - name: Deploy
-      run:
-        git clone https://github.com/${{github.actor}}:${{github.token}}@github.com/${{github.repository}} -b master
+      run: |
+        git clone https://${{github.actor}}:${{github.token}}@github.com/${{github.repository}} -b master
         mv yuk7.github.io/.git dist/
         cd dist
         git add .

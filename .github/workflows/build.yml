@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Node.js Build CI
 
 on: [push]
 
@@ -13,6 +13,6 @@ jobs:
       with:
         node-version: '13.x'
     - name: Build
-      run:
+      run: |
         npm install
         npm run build
