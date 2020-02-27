@@ -1,5 +1,5 @@
 <template>
-<div id="app">
+<v-app id="app">
   <v-card>
     <v-toolbar flat>
       <v-toolbar-title>yuk7.github.io</v-toolbar-title>
@@ -32,5 +32,5 @@
   </v-card>
 
   <router-view></router-view>
-</div>
+</v-app>
 </template>
