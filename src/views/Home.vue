@@ -34,7 +34,7 @@
             <v-icon>fab fa-keybase</v-icon>
           </v-btn>
           <v-btn icon href="https://github.com/yuk7">
-            <v-icon>mdi-github-circle</v-icon>
+            <v-icon>mdi-github</v-icon>
           </v-btn>
           <v-btn icon @click="dialog_btc = true">
             <v-icon>fab fa-bitcoin</v-icon>

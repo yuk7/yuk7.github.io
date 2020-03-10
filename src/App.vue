@@ -18,7 +18,7 @@
 
           <v-tab  to="/repos">
             Repositories
-            <v-icon>mdi-github-circle</v-icon>
+            <v-icon>mdi-github</v-icon>
           </v-tab>
 
           <v-tab href="https://yuk7.github.io/StartPage">
