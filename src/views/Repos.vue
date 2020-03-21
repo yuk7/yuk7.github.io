@@ -10,7 +10,7 @@
               <v-btn outlined :href="repo.html_url">View On GitHub</v-btn>
               <v-spacer></v-spacer>
               <v-icon>mdi-star</v-icon><span v-html="repo.stargazers_count"></span>&nbsp;
-              <v-icon v-if="repo.language!==null">mdi-file-document-box</v-icon><span v-html="repo.language"></span>
+              <v-icon v-if="repo.language!==null">mdi-xml</v-icon><span v-html="repo.language"></span>
             </v-card-actions>
           </v-card>
         </v-flex>
