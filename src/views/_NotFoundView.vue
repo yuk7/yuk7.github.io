@@ -7,7 +7,7 @@
             <div>You may have mistyped the address or the page may have moved.</div>
         </v-card-text>
         <v-card-actions>
-            <v-btn text to="/">Go to Top</v-btn>
+            <v-btn to="/">Go to Top</v-btn>
         </v-card-actions>
     </v-card>
 </v-container>
@@ -17,7 +17,6 @@
     .nfpage {
         height: 40vh;
     }
-
     .card {
         top: 50%;
         margin: 10px auto;
