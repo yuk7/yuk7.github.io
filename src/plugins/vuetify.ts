@@ -1,6 +1,8 @@
 // Styles
 import '@mdi/font/css/materialdesignicons.css'
 import '@fortawesome/fontawesome-free/css/all.css'
+import { mdi } from 'vuetify/iconsets/mdi'
+import { aliases, fa } from "vuetify/iconsets/fa";
 import 'vuetify/styles'
 
 // Vuetify
@@ -8,6 +10,10 @@ import { createVuetify } from 'vuetify'
 
 export default createVuetify({
   icons: {
-    iconfont: 'fab'
-  }
+    defaultSet: "fa",
+    aliases,
+    sets: {
+      fa, mdi
+    },
+  },
 })

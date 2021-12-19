@@ -1,22 +1,24 @@
 <template>
   <v-container>
-      <v-card class="mx-auto" outlined max-width="800px">
+      <v-card class="mx-auto" max-width="500">
         <v-list-item three-line>
           <v-list-item-content>
             <h2>yuk7</h2>
             <p>
-              <v-icon>mdi-cake-variant</v-icon> Jan. 2000 / 19y.o.
+              <v-icon>mdi mdi-cake-variant</v-icon> Jan. 2000
             </p>
             <p>
-              <v-icon>mdi-city</v-icon> Japan
+              <v-icon>mdi mdi-city</v-icon> Japan
             </p>
             <p>
-              <v-icon>mdi-heart</v-icon> Linux/Android Udon/Chocolate/Mint
+              <v-icon>mdi mdi-heart</v-icon> Linux/Android Udon/Chocolate/Mint
             </p>
             <p>
-              <v-icon>mdi-code-braces</v-icon> C#/Java/Kotlin/PHP/JavaScript
+              <v-icon>mdi mdi-code-braces</v-icon> C#/Go/Java/Kotlin/PHP/JavaScript
             </p>
           </v-list-item-content>
+
+          <v-spacer />
 
           <v-avatar class="profile" color="grey" size="20%">
             <v-img src="https://avatars2.githubusercontent.com/u/29954265" max-width="200px"></v-img>
@@ -25,13 +27,16 @@
 
         <v-card-actions>
           <v-btn icon @click="dialog_email = true">
-            <v-icon>mdi-email</v-icon>
+            <v-icon>mdi mdi-email</v-icon>
+          </v-btn>
+          <v-btn icon href="https://t.me/yuk_7">
+            <v-icon>fab fa-telegram</v-icon>
           </v-btn>
           <v-btn icon href="https://keybase.io/yuk7">
             <v-icon>fab fa-keybase</v-icon>
           </v-btn>
           <v-btn icon href="https://github.com/yuk7">
-            <v-icon>mdi-github</v-icon>
+            <v-icon>mdi mdi-github</v-icon>
           </v-btn>
           <v-btn icon @click="dialog_btc = true">
             <v-icon>fab fa-bitcoin</v-icon>
@@ -92,9 +97,3 @@
     }
   }
 </script>
-
-<style>
-  .mx-auto {
-      margin: 10px auto;
-  }
-</style>
