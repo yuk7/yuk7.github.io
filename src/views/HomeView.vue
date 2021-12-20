@@ -27,7 +27,7 @@
 
         <v-card-actions>
           <v-btn icon @click="dialog_email = true">
-            <v-icon>mdi mdi-email</v-icon>
+            <v-icon>fas fa-envelope</v-icon>
           </v-btn>
           <v-btn icon href="https://t.me/yuk_7">
             <v-icon>fab fa-telegram</v-icon>
@@ -36,7 +36,7 @@
             <v-icon>fab fa-keybase</v-icon>
           </v-btn>
           <v-btn icon href="https://github.com/yuk7">
-            <v-icon>mdi mdi-github</v-icon>
+            <v-icon>fab fa-github</v-icon>
           </v-btn>
           <v-btn icon @click="dialog_btc = true">
             <v-icon>fab fa-bitcoin</v-icon>
@@ -44,7 +44,7 @@
         </v-card-actions>
       </v-card>
 
-      <v-dialog v-model="dialog_email" max-width="500">
+      <v-dialog v-model="dialog_email">
         <v-card>
           <v-card-title class="headline">Email</v-card-title>
           <v-card-text>
@@ -63,7 +63,8 @@
         </v-card>
       </v-dialog>
 
-      <v-dialog v-model="dialog_btc" max-width="500">
+      <v-row justify="center">
+      <v-dialog v-model="dialog_btc" max-width="100%">
         <v-card>
           <v-card-title class="headline">Bitcoin</v-card-title>
           <v-card-text>
@@ -84,6 +85,7 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
+    </v-row>
   </v-container>
 </template>
 
@@ -97,3 +99,9 @@
     }
   }
 </script>
+
+<style>
+  .mx-auto {
+      margin: 10px auto;
+  }
+</style>

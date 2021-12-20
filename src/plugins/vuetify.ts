@@ -15,5 +15,5 @@ export default createVuetify({
     sets: {
       fa, mdi
     },
-  },
+  }
 })
