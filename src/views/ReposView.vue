@@ -2,7 +2,7 @@
     <v-container>
       <v-row>
         <v-col v-for="repo in orderedRepos" v-bind:key="repo.id">
-          <v-card class="card-outter" height="100%" min-width="350">
+          <v-card elevation="4" height="100%" min-width="350">
             <v-card-title primary class="title" v-html="repo.name"></v-card-title>
             <v-card-text v-html="repo.description"></v-card-text>
             <v-card-actions class="card-actions">

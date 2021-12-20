@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card class="mx-auto" max-width="500">
+    <v-card class="mx-auto" elevation="4" max-width="500">
       <v-list-item three-line>
         <v-list-item-content>
           <h2>yuk7</h2>
@@ -44,7 +44,7 @@
       </v-card-actions>
     </v-card>
 
-    <v-card class="mx-auto" max-width="500">
+    <v-card class="mx-auto" elevation="4" max-width="500">
       <v-list-item three-line>
         <v-list-item-content>
           <h2>Life History</h2>

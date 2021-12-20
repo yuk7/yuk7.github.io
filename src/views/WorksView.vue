@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card class="mx-auto" max-width="600">
+    <v-card class="mx-auto" elevation="4" max-width="600">
       <v-list-item three-line>
         <v-list-item-content>
           <h2>Works</h2>
