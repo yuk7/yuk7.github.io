@@ -44,6 +44,29 @@
         </v-card-actions>
       </v-card>
 
+      <v-card class="mx-auto" max-width="500">
+        <v-list-item three-line>
+          <v-list-item-content>
+            <h2>Life History</h2>
+
+            <v-timeline density="end">
+              <v-timeline-item v-for="(item, i) in history" :key="i" size="8px" iconColor="blue">
+            <v-container class="fill-height">
+              <p>{{ item.year }}</p>
+              <div>
+                <h2 :class="title">{{ item.title }}</h2>
+                <div>
+                    {{ item.content }}
+                </div>
+                <p style="color: gray"><small>{{ item.env }}</small></p>
+              </div>
+            </v-container>
+              </v-timeline-item>
+            </v-timeline>
+          </v-list-item-content>
+        </v-list-item>
+      </v-card>
+
       <v-dialog v-model="dialog_email">
         <v-card>
           <v-card-title class="headline">Email</v-card-title>
@@ -53,7 +76,7 @@
 
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn text href="mailto:yukx00@gmail.com">
+            <v-btn href="mailto:yukx00@gmail.com">
               Open App
             </v-btn>
             <v-btn text @click="dialog_email = false">
@@ -76,7 +99,7 @@
 
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn text href="bitcoin:1GepqF7fxX1Z2jJsF2tQQNGAvoVYx6syDK">
+            <v-btn href="bitcoin:1GepqF7fxX1Z2jJsF2tQQNGAvoVYx6syDK">
               Open App
             </v-btn>
             <v-btn text @click="dialog_btc = false">
@@ -94,7 +117,38 @@
     data() {
       return {
         dialog_email: false,
-        dialog_btc: false
+        dialog_btc: false,
+        history: [
+        {
+          year: '2013~2015',
+          title: 'Robot Contest club in JHS',
+          content: 'Participated in some robot contests as a club activity. Experienced as the technical leader and programmer in the team. Our team won a special award in a tournament.',
+          env: 'C, C#, AVR, STM32'
+        },{
+          year: '2013~2015',
+          title: 'Science Club Experience',
+          content: 'Learned science in science club. Developed software that displays artificial satellite data in 3D in C++.',
+          env: 'C++'
+        },
+        {
+          year: '2015~2018',
+          title: 'Teaching Assistant in SHS',
+          content: 'Teaching Assistant in C language and JavaScript classes.',
+          env: 'C, JavaScript'
+        },
+        {
+          year: '2018~',
+          title: 'Computer Science Student in a College',
+          content: 'Learned programming and computer science in college. Joined a programming club and some hackathon.',
+          env: 'C#, Java, PHP, Python, R, WPF, Servlet, JSP, Spring'
+        },
+        {
+          year: '2019~2021',
+          title: 'Part-time backend and frontend engineer in a Web company',
+          content: 'Joined a web company and some project. Developed some hybrid apps, web apps and sites.',
+          env: 'PHP, JavaScript, Bash, Python'
+        }
+      ],
       }
     }
   }
