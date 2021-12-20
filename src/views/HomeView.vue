@@ -86,34 +86,33 @@
       </v-card>
     </v-dialog>
 
-    <v-row justify="center">
-      <v-dialog v-model="dialog_btc" max-width="100%">
-        <v-card>
-          <v-card-title class="headline">Bitcoin</v-card-title>
-          <v-card-text>
-            1GepqF7fxX1Z2jJsF2tQQNGAvoVYx6syDK
-            <v-layout justify-center>
-              <v-img src="img/btc.png" max-width="200px"></v-img>
-            </v-layout>
-          </v-card-text>
+    <v-dialog v-model="dialog_btc">
+      <v-card>
+        <v-card-title class="headline">Bitcoin</v-card-title>
+        <v-card-text>
+          1GepqF7fxX1Z2jJsF2tQQNGAvoVYx6syDK
+          <v-layout justify-center>
+            <v-img src="img/btc.png" max-width="200px"></v-img>
+          </v-layout>
+        </v-card-text>
 
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn href="bitcoin:1GepqF7fxX1Z2jJsF2tQQNGAvoVYx6syDK">
-              Open App
-            </v-btn>
-            <v-btn text @click="dialog_btc = false">
-              Close
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
-    </v-row>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn href="bitcoin:1GepqF7fxX1Z2jJsF2tQQNGAvoVYx6syDK">
+            Open App
+          </v-btn>
+          <v-btn text @click="dialog_btc = false">
+            Close
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
-<script>
-  export default {
+<script lang="ts">
+  import { defineComponent } from 'vue'
+  export default defineComponent({
     data() {
       return {
         dialog_email: false,
@@ -151,7 +150,7 @@
         ],
       }
     }
-  }
+  });
 </script>
 
 <style>

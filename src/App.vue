@@ -23,12 +23,12 @@
         <v-icon>mdi mdi-home</v-icon>
         <span>Home</span>
       </v-btn>
-  
+
       <v-btn to="/works">
         <v-icon>mdi mdi-briefcase</v-icon>
         <span>Works</span>
       </v-btn>
-  
+
       <v-btn href="/blog">
         <v-icon>mdi mdi-post</v-icon>
         <span>Blog</span>

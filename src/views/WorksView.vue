@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card class="mx-auto" max-width="500">
+    <v-card class="mx-auto" max-width="600">
       <v-list-item three-line>
         <v-list-item-content>
           <h2>Works</h2>
@@ -25,12 +25,11 @@
   </v-container>
 </template>
 
-<script>
-  export default {
+<script lang="ts">
+  import { defineComponent } from 'vue'
+  export default defineComponent({
     data() {
       return {
-        dialog_email: false,
-        dialog_btc: false,
         history: [
           {
             year: '2019~',
@@ -45,6 +44,12 @@
             env: 'PHP, JavaScript'
           },
           {
+            year: '2019~',
+            title: 'Operation of a smartphone hybrid app backend of local government.',
+            content: 'Worked/Assigned as a backend engineer of an local government app.',
+            env: 'PHP, JavaScript'
+          },
+          {
             year: '2019~2021',
             title: 'Renovation of the website of a pharmaceutical company',
             content: 'Worked/Assigned as a frontend engineer of pharmaceutical company renovation team.',
@@ -52,24 +57,18 @@
           },
           {
             year: '2020',
-            title: 'English word book hybrid application',
-            content: 'Worked as a frontend engineer of an English composition app of an educational company.',
-            env: 'JavaScript'
+            title: 'Developed English composition book hybrid application',
+            content: 'Worked/Assigned as a application engineer of an English composition book app of an educational company.',
+            env: 'JavaScript, Cordova'
           },
           {
             year: '2020',
-            title: 'Matching site',
-            content: 'Worked/Assigned as a backend and frontend engineer of matching site development team.',
+            title: 'Developed Job Matching Site',
+            content: 'Worked/Assigned as a backend and frontend engineer of a job matching site development team.',
             env: 'PHP, JavaScript'
           }
         ],
       }
     }
-  }
+  });
 </script>
-
-<style>
-  .mx-auto {
-    margin: 10px auto;
-  }
-</style>
