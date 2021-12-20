@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "@mdi/font": "^5.9.55",
+    "@mdi/font": "^6.5.95",
     "axios": "^0.24.0",
     "core-js": "^3.8.3",
     "roboto-fontface": "*",
