@@ -29,6 +29,6 @@ jobs:
         mv yuk7.github.io/.git dist/
         cd dist
         git add .
-        git commit -m "built from ${{github.sha}}"
+        git commit --allow-empty -m "built from ${{github.sha}}"
         git push --force-with-lease origin main
         
