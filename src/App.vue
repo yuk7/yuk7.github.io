@@ -1,7 +1,7 @@
 <template>
   <v-app id="app" :theme="theme">
     <v-app-bar elevation="4">
-      <v-toolbar-title>yuk7.github.io</v-toolbar-title>
+      <v-toolbar-title><h1>ㅤyuk7.github.io</h1></v-toolbar-title>
       <v-spacer />
       <div class="d-none d-sm-flex">
         <v-btn class="mr-3" to="/" @click.stop="drawer = false">Home</v-btn>
