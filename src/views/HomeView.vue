@@ -47,7 +47,25 @@
     <v-card class="mx-auto" elevation="4" max-width="500">
       <v-list-item three-line>
         <v-list-item-content>
-          <h2>Life History</h2>
+          <h2>Skills</h2>
+          <ul>
+            <li>Linux(kernel build/userland)</li>
+            <li>Container Techs</li>
+            <li>Web backend development</li>
+            <li>Android native apps</li>
+            <li>Windows .NET apps</li>
+            <li>WSL</li>
+            <li>Reverse Engineering</li>
+          </ul>
+        </v-list-item-content>
+      </v-list-item>
+    </v-card>
+
+
+    <v-card class="mx-auto" elevation="4" max-width="500">
+      <v-list-item three-line>
+        <v-list-item-content>
+          <h2>Life Experience</h2>
 
           <v-timeline density="end">
             <v-timeline-item v-for="(item, i) in history" :key="i" size="8px" iconColor="blue">
@@ -120,8 +138,8 @@
         history: [
           {
             year: '2013~2015',
-            title: 'Robotics Contest Club in JHS',
-            content: 'Participated in some robot contests as a club activity. Experienced as the technical leader and programmer in the team. Our team won a special award in a tournament.',
+            title: 'Robotics Contest(Club in JHS)',
+            content: 'Participated in some robotics contests as a club activity. Experienced as the technical leader and programmer in the team. Our team won a special award in a tournament.',
             env: 'C, C#, AVR, STM32'
           }, {
             year: '2013~2015',
