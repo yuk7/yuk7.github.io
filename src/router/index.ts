@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { trackRouter } from 'vue-gtag-next'
 import HomeView from '../views/HomeView.vue'
 import BlogView from '../views/BlogView.vue'
 import ReposView from '../views/ReposView.vue'
@@ -37,5 +38,7 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+trackRouter(router)
 
 export default router
