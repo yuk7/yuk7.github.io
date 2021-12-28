@@ -44,26 +44,21 @@
       </v-card-actions>
     </v-card>
 
-    <v-card class="mx-auto" elevation="4" max-width="500">
-      <v-list-item three-line>
-        <v-list-item-content>
-          <h2>Skills</h2>
-          <p>Linux(kernel build/userland)</p>
-          <p>Container Techs</p>
-          <p>Web backend development</p>
-          <p>Android native apps</p>
-          <p>Windows .NET apps</p>
-          <p>WSL</p>
-          <p>Reverse Engineering</p>
-        </v-list-item-content>
-      </v-list-item>
+    <v-card class="mx-auto" elevation="4" max-width="500" title="Skills">
+      <v-list lines="two">
+        <v-list-item prependIcon="fab fa-linux" title="Linux" subtitle="kernel build, userland, server settings" />
+        <v-list-item prependIcon="fas fa-boxes" title="Container Techs" subtitle="Docker, LXC" />
+        <v-list-item prependIcon="mdi mdi-web" title="Web Development" subtitle="JavaScript, PHP, Java" />
+        <v-list-item prependIcon="mdi mdi-android" title="Android App Development" subtitle="Java, Kotlin" />
+        <v-list-item prependIcon="mdi mdi-dot-net" title="Windows .NET Development"
+          subtitle="C#, VB.NET, WinForms, WPF" />
+      </v-list>
     </v-card>
 
 
-    <v-card class="mx-auto" elevation="4" max-width="500">
+    <v-card class="mx-auto" elevation="4" max-width="500" title="Life Experience">
       <v-list-item three-line>
         <v-list-item-content>
-          <h2>Life Experience</h2>
 
           <v-timeline density="end">
             <v-timeline-item v-for="(item, i) in history" :key="i" size="8px" iconColor="blue">
