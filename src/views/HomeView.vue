@@ -48,15 +48,13 @@
       <v-list-item three-line>
         <v-list-item-content>
           <h2>Skills</h2>
-          <ul>
-            <li>Linux(kernel build/userland)</li>
-            <li>Container Techs</li>
-            <li>Web backend development</li>
-            <li>Android native apps</li>
-            <li>Windows .NET apps</li>
-            <li>WSL</li>
-            <li>Reverse Engineering</li>
-          </ul>
+          <p>Linux(kernel build/userland)</p>
+          <p>Container Techs</p>
+          <p>Web backend development</p>
+          <p>Android native apps</p>
+          <p>Windows .NET apps</p>
+          <p>WSL</p>
+          <p>Reverse Engineering</p>
         </v-list-item-content>
       </v-list-item>
     </v-card>
