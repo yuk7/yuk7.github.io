@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-card class="mx-auto" elevation="4" max-width="500">
-      <v-list-item three-line>
+      <v-list-item>
         <v-list-item-content>
           <h2>yuk7</h2>
           <p>
@@ -57,30 +57,24 @@
 
 
     <v-card class="mx-auto" elevation="4" max-width="500" title="Life Experience">
-      <v-list-item three-line>
-        <v-list-item-content>
-
-          <v-timeline density="end">
-            <v-timeline-item v-for="(item, i) in history" :key="i" size="8px" iconColor="blue">
-              <v-container class="fill-height">
-                <p>{{ item.year }}</p>
-                <div>
-                  <h2 :class="title">{{ item.title }}</h2>
-                  <div>
-                    {{ item.content }}
-                  </div>
-                  <p style="color: gray"><small>{{ item.env }}</small></p>
-                </div>
-              </v-container>
-            </v-timeline-item>
-          </v-timeline>
-        </v-list-item-content>
-      </v-list-item>
+      <v-timeline density="end">
+        <v-timeline-item v-for="(item, i) in history" :key="i" size="8px" iconColor="blue">
+          <v-container class="fill-height">
+            <div>{{ item.year }}</div>
+            <div>
+              <div class="text-h5">{{ item.title }}</div>
+              <div class="text-body-1">
+                {{ item.content }}
+              </div>
+              <p style="color: gray"><small>{{ item.env }}</small></p>
+            </div>
+          </v-container>
+        </v-timeline-item>
+      </v-timeline>
     </v-card>
 
     <v-dialog v-model="dialog_email">
-      <v-card>
-        <v-card-title class="headline">Email</v-card-title>
+      <v-card title="Email">
         <v-card-text>
           yukx00@gmail.com
         </v-card-text>
@@ -88,7 +82,7 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn href="mailto:yukx00@gmail.com">
-            Open App
+            Open in App
           </v-btn>
           <v-btn text @click="dialog_email = false">
             Close
@@ -98,19 +92,18 @@
     </v-dialog>
 
     <v-dialog v-model="dialog_btc">
-      <v-card>
-        <v-card-title class="headline">Bitcoin</v-card-title>
+      <v-card title="Bitcoin">
         <v-card-text>
           1GepqF7fxX1Z2jJsF2tQQNGAvoVYx6syDK
-          <v-layout justify-center>
-            <v-img src="img/btc.png" max-width="200px"></v-img>
-          </v-layout>
         </v-card-text>
+        <v-layout justify-center>
+          <v-img src="img/btc.png" max-width="200px"></v-img>
+        </v-layout>
 
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn href="bitcoin:1GepqF7fxX1Z2jJsF2tQQNGAvoVYx6syDK">
-            Open App
+            Open in App
           </v-btn>
           <v-btn text @click="dialog_btc = false">
             Close
@@ -131,7 +124,7 @@
         history: [
           {
             year: '2013~2015',
-            title: 'Robotics Contest(Club in JHS)',
+            title: 'Robotics Contest Club in JHS',
             content: 'Participated in some robotics contests as a club activity. Experienced as the technical leader and programmer in the team. Our team won a special award in a tournament.',
             env: 'C, C#, AVR, STM32'
           }, {

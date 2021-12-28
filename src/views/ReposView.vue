@@ -2,9 +2,7 @@
     <v-container>
       <v-row>
         <v-col v-for="repo in orderedRepos" v-bind:key="repo.id">
-          <v-card elevation="4" height="100%" min-width="350">
-            <v-card-title primary class="title" v-html="repo.name"></v-card-title>
-            <v-card-text v-html="repo.description"></v-card-text>
+          <v-card elevation="4" height="100%" min-width="350" :title="repo.name" :text="repo.description">
             <v-card-actions class="card-actions">
               <v-btn outlined :href="repo.html_url">View On GitHub</v-btn>
               <v-spacer />
