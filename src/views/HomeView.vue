@@ -46,11 +46,11 @@
 
     <v-card class="mx-auto" elevation="4" max-width="500" title="Skills">
       <v-list lines="two">
-        <v-list-item prependIcon="fab fa-linux" title="Linux" subtitle="kernel build, userland, server settings" />
-        <v-list-item prependIcon="fas fa-boxes" title="Container Techs" subtitle="Docker, LXC" />
+        <v-list-item prependIcon="mdi mdi-linux" title="Linux" subtitle="kernel build, userland, server settings" />
+        <v-list-item prependIcon="mdi mdi-package-variant" title="Container Techs" subtitle="Docker, LXC" />
         <v-list-item prependIcon="mdi mdi-web" title="Web Development" subtitle="JavaScript, PHP, Java" />
         <v-list-item prependIcon="mdi mdi-android" title="Android App Development" subtitle="Java, Kotlin" />
-        <v-list-item prependIcon="mdi mdi-dot-net" title="Windows .NET Development"
+        <v-list-item prependIcon="mdi mdi-dot-net" title=".NET Development"
           subtitle="C#, VB.NET, WinForms, WPF" />
       </v-list>
     </v-card>
@@ -104,7 +104,7 @@
 <script lang="ts">
   import { defineComponent } from 'vue';
   import HistoryTimeLine from "@/components/HistoryTimeLine.vue";
-  
+
   export default defineComponent({
     components: {
       HistoryTimeLine
