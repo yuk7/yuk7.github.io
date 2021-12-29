@@ -1,20 +1,7 @@
 <template>
   <v-container>
     <v-card class="mx-auto" elevation="4" max-width="600" title="Works">
-      <v-timeline density="end">
-        <v-timeline-item v-for="(item, i) in history" :key="i" size="8px" iconColor="blue">
-          <v-container class="fill-height">
-            <div>{{ item.year }}</div>
-            <div>
-              <div class="text-h5">{{ item.title }}</div>
-              <div class="text-body-1">
-                {{ item.content }}
-              </div>
-              <p style="color: gray"><small>{{ item.env }}</small></p>
-            </div>
-          </v-container>
-        </v-timeline-item>
-      </v-timeline>
+      <HistoryTimeLine :items="history" />
     </v-card>
     <v-spacer />
   </v-container>
@@ -22,7 +9,12 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue'
+  import HistoryTimeLine from "@/components/HistoryTimeLine.vue";
+
   export default defineComponent({
+    components: {
+      HistoryTimeLine
+    },
     data() {
       return {
         history: [

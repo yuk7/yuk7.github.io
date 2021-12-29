@@ -47,8 +47,7 @@
 
   export type DataType = {
     theme: string,
-    drawer: boolean,
-    group: any
+    drawer: boolean
   }
 
   export default defineComponent({
@@ -56,8 +55,7 @@
     data(): DataType {
       return {
         theme: "light",
-        drawer: false,
-        group: null
+        drawer: false
       }
     },
     methods: {
