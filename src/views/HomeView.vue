@@ -97,7 +97,7 @@
           1GepqF7fxX1Z2jJsF2tQQNGAvoVYx6syDK
         </v-card-text>
         <v-layout justify-center>
-          <v-img src="img/btc.png" max-width="200px"></v-img>
+          <v-img src="@/assets/img/btc.png" max-width="200px"></v-img>
         </v-layout>
 
         <v-card-actions>
