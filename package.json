@@ -11,7 +11,7 @@
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@mdi/font": "^6.5.95",
     "axios": "^0.24.0",
-    "core-js": "^3.20.1",
+    "core-js": "^3.20.2",
     "roboto-fontface": "*",
     "vue": "^3.2.13",
     "vue-gtag-next": "^1.14.0",
