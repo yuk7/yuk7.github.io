@@ -38,8 +38,9 @@ npm run build
 .
 |-.github
 |   |-workflows
-|   |   |-build.yml (only build when pushed)
+|   |   |-build.yml (run build only build when pushed)
 |   |   |-deploy.yml (build and push to main when pushed to source branch)
+|   |   |-lint.yml (run lint when pushed and pull requested)
 |
 |-public (file generate template)
 |   |-index.html (modified for supports SPA in GitHub Pages)
