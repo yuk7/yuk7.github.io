@@ -46,10 +46,10 @@
 
     <v-card class="mx-auto" elevation="4" max-width="500" title="Skills">
       <v-list lines="two">
-        <v-list-item prependIcon="mdi mdi-linux" title="Linux" subtitle="kernel build, userland, server settings" />
-        <v-list-item prependIcon="mdi mdi-package-variant" title="Container Techs" subtitle="Docker, LXC" />
+        <v-list-item prependIcon="mdi mdi-linux" title="Linux" subtitle="kernel build, user side, server settings" />
+        <v-list-item prependIcon="mdi mdi-package-variant" title="Container Techs" subtitle="Docker, LXC, nspawn" />
         <v-list-item prependIcon="mdi mdi-web" title="Web Development" subtitle="JavaScript, PHP, Java" />
-        <v-list-item prependIcon="mdi mdi-android" title="Android App Development" subtitle="Java, Kotlin" />
+        <v-list-item prependIcon="mdi mdi-android" title="Android App Development" subtitle="Java, Kotlin, Cordova" />
         <v-list-item prependIcon="mdi mdi-dot-net" title=".NET Development"
           subtitle="C#, VB.NET, WinForms, WPF" />
       </v-list>
@@ -141,7 +141,7 @@
             year: '2019~2021',
             title: 'Part-time backend and frontend engineer in a Web company',
             content: 'Joined a web company and some project. Developed some hybrid apps, web apps and sites.',
-            env: 'PHP, JavaScript, Bash, Python'
+            env: 'PHP, JavaScript, Cordova, Bash, Python'
           }
         ],
       }
