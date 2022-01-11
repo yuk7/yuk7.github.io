@@ -9,14 +9,14 @@ jobs:
     name: "Lint"
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v2
-     - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '17.x'
-     - name: File attributes Lint
-      uses: yuk7/gh-action-attr-checker@main
-    - name: Codes Lint
-      run: |
-        npm install
-        npm run lint
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '17.x'
+      - name: File attributes Lint
+        uses: yuk7/gh-action-attr-checker@main
+      - name: Codes Lint
+        run: |
+          npm install
+          npm run lint
