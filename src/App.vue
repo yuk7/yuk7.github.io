@@ -1,6 +1,7 @@
 <template>
   <v-app id="app" :theme="theme">
     <v-app-bar elevation="4">
+      <ParticleBackground id="appbar-background"/>
       <v-toolbar-title>yuk7.github.io</v-toolbar-title>
       <v-spacer />
       <div class="d-none d-sm-flex">
@@ -15,11 +16,12 @@
     </v-app-bar>
 
     <v-main>
-      <ParticleBackground id="background" />
+      <ParticleBackground id="background" class="d-none d-sm-flex" />
       <router-view />
     </v-main>
 
     <v-bottom-navigation class="d-flex d-sm-none">
+      <ParticleBackground id="bottomnav-background"/>
       <v-btn to="/">
         <v-icon>mdi mdi-home</v-icon>
         <span>Home</span>
