@@ -15,6 +15,7 @@
     </v-app-bar>
 
     <v-main>
+      <ParticleBackground id="background" />
       <router-view />
     </v-main>
 
@@ -43,7 +44,8 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
+  import { defineComponent } from 'vue';
+  import ParticleBackground from "@/components/ParticleBackground.vue";
 
   export type DataType = {
     theme: string,
@@ -52,6 +54,9 @@
 
   export default defineComponent({
     name: 'App',
+    components: {
+      ParticleBackground
+    },
     data(): DataType {
       return {
         theme: "light",
