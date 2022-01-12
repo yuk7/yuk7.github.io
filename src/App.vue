@@ -5,10 +5,10 @@
       <v-toolbar-title>yuk7.github.io</v-toolbar-title>
       <v-spacer />
       <div class="d-none d-sm-flex">
-        <v-btn class="mr-3" to="/" @click.stop="drawer = false">Home</v-btn>
-        <v-btn class="mr-3" to="/works" @click.stop="drawer = false">Works</v-btn>
-        <v-btn class="mr-3" href="/blog" @click.stop="drawer = false">Blog</v-btn>
-        <v-btn class="mr-3" to="/repos" @click.stop="drawer = false">Repositories</v-btn>
+        <v-btn class="mr-3" to="/">Home</v-btn>
+        <v-btn class="mr-3" to="/works">Works</v-btn>
+        <v-btn class="mr-3" href="/blog">Blog</v-btn>
+        <v-btn class="mr-3" to="/repos">Repositories</v-btn>
       </div>
       <v-btn icon @click="toggleTheme">
         <v-icon>mdi mdi-brightness-6</v-icon>
@@ -50,8 +50,7 @@
   import ParticleBackground from "@/components/ParticleBackground.vue";
 
   export type DataType = {
-    theme: string,
-    drawer: boolean
+    theme: string
   }
 
   export default defineComponent({
@@ -61,8 +60,7 @@
     },
     data(): DataType {
       return {
-        theme: "light",
-        drawer: false
+        theme: "light"
       }
     },
     methods: {
