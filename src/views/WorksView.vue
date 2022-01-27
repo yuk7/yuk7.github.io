@@ -2,6 +2,12 @@
   <v-container>
     <v-card class="mx-auto" elevation="4" max-width="600" title="Works">
       <HistoryTimeLine :items="history" />
+      <v-card-actions>
+        <v-spacer />
+        <v-btn href="https://yuk7-works-priv.vercel.app/">
+          View details (login)
+        </v-btn>
+      </v-card-actions>
     </v-card>
     <v-spacer />
   </v-container>
