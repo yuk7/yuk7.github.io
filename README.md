@@ -1,4 +1,4 @@
-# yuk7.github.io
+# yuk7.is-a.dev
 My personal website.
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/yuk7/yuk7.github.io/Node.js%20Build%20CI?style=flat-square)

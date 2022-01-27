@@ -2,7 +2,7 @@
   <v-app id="app" :theme="theme">
     <v-app-bar elevation="4">
       <ParticleBackground id="appbar-background"/>
-      <v-toolbar-title>yuk7.github.io</v-toolbar-title>
+      <v-toolbar-title>yuk7.is-a.dev</v-toolbar-title>
       <v-spacer />
       <div class="d-none d-sm-flex">
         <v-btn class="mr-3" to="/">Home</v-btn>
