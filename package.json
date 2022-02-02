@@ -12,7 +12,7 @@
     "@mdi/font": "^6.5.95",
     "axios": "^0.25.0",
     "core-js": "^3.21.0",
-    "particles.vue3": "^1.22.0",
+    "particles.vue3": "^1.22.2",
     "roboto-fontface": "*",
     "vue": "^3.2.29",
     "vue-gtag-next": "^1.14.0",
