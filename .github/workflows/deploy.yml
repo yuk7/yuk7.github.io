@@ -25,8 +25,8 @@ jobs:
         git config --global user.email "${{secrets.ACTIONS_EMAIL}}"
     - name: Deploy
       run: |
-        git clone https://${{github.actor}}:${{github.token}}@github.com/${{github.repository}} -b main
-        mv yuk7.github.io/.git dist/
+        git clone https://${{github.actor}}:${{github.token}}@github.com/${{github.repository}} -b main --depth 1 dist-branch
+        mv dist-branch/.git dist/
         cd dist
         git add .
         git commit --allow-empty -m "built from ${{github.sha}}"
