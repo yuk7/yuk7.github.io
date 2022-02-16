@@ -134,7 +134,7 @@
           {
             year: '2018~',
             title: 'Computer Science Student in a College',
-            content: 'Learned programming and computer science in college. Joined a programming club and some hackathon.',
+            content: 'Learned programming and computer science in college. Joined a programming club and some hackathon. My research&production work won a special incentive award on campus.',
             env: 'C#, Java, PHP, Python, R, WPF, Servlet, JSP, Spring'
           },
           {
