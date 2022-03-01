@@ -10,7 +10,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@mdi/font": "^6.5.95",
-    "axios": "^0.25.0",
+    "axios": "^0.26.0",
     "core-js": "^3.21.0",
     "particles.vue3": "^1.22.2",
     "roboto-fontface": "*",
