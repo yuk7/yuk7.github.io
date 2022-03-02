@@ -14,7 +14,7 @@
     "core-js": "^3.21.1",
     "particles.vue3": "^1.41.5",
     "roboto-fontface": "*",
-    "vue": "^3.2.29",
+    "vue": "^3.2.31",
     "vue-gtag-next": "^1.14.0",
     "vue-router": "^4.0.3",
     "vuetify": "^3.0.0-alpha.13",
