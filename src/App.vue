@@ -8,6 +8,7 @@
         <v-btn class="mr-3" to="/works">Works</v-btn>
         <v-btn class="mr-3" href="/blog">Blog</v-btn>
         <v-btn class="mr-3" to="/repos">Repositories</v-btn>
+        <v-btn class="mr-3" to="/links">Links</v-btn>
       </div>
       <v-btn icon @click="toggleTheme">
         <v-icon>mdi mdi-brightness-6</v-icon>
