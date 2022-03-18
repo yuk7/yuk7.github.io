@@ -1,7 +1,6 @@
 <template>
   <v-app id="app" :theme="theme">
     <v-app-bar elevation="4">
-      <ParticleBackground id="appbar-background"/>
       <v-toolbar-title>yuk7.is-a.dev</v-toolbar-title>
       <v-spacer />
       <div class="d-none d-sm-flex">
@@ -16,12 +15,11 @@
     </v-app-bar>
 
     <v-main>
-      <ParticleBackground id="background" class="d-none d-sm-flex" />
+      <ParticleSnowBackground id="background" class="d-none d-sm-flex" />
       <router-view />
     </v-main>
 
     <v-bottom-navigation class="d-flex d-sm-none">
-      <ParticleBackground id="bottomnav-background"/>
       <v-btn to="/">
         <v-icon>mdi mdi-home</v-icon>
         <span>Home</span>
@@ -45,9 +43,19 @@
   </v-app>
 </template>
 
+<style scoped>
+  #app {
+    min-height: 100vh;
+    background-image: url("@/assets/img/night_building_blur.jpg");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+</style>
+
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import ParticleBackground from "@/components/ParticleBackground.vue";
+  import ParticleSnowBackground from "@/components/ParticleSnowBackground.vue";
 
   export type DataType = {
     theme: string
@@ -56,7 +64,7 @@
   export default defineComponent({
     name: 'App',
     components: {
-      ParticleBackground
+      ParticleSnowBackground
     },
     data(): DataType {
       return {
