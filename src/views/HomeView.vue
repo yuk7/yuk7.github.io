@@ -38,6 +38,9 @@
         <v-btn icon href="https://github.com/yuk7">
           <v-icon>fab fa-github</v-icon>
         </v-btn>
+        <v-btn icon href="https://paypal.me/yuk77">
+          <v-icon>fab fa-paypal</v-icon>
+        </v-btn>
         <v-btn icon @click="dialog_btc = true">
           <v-icon>fab fa-bitcoin</v-icon>
         </v-btn>
@@ -116,14 +119,9 @@
         history: [
           {
             year: '2013~2015',
-            title: 'Robotics Contest Club in JHS',
-            content: 'Participated in some robotics contests as a club activity. Experienced as the technical leader and programmer in the team. Our team won a special award in a tournament.',
+            title: 'Robotics Contest Club Activity in JHS',
+            content: 'Participated in some robotics contests as a club activity. Experienced as the technical leader and programmer in the team. Our team won a special award in a area tournament.',
             env: 'C, C#, AVR, STM32'
-          }, {
-            year: '2013~2015',
-            title: 'Science Club Experience',
-            content: 'Learned science in science club. Developed software that displays artificial satellite data in 3D in C++.',
-            env: 'C++'
           },
           {
             year: '2015~2018',
@@ -139,7 +137,7 @@
           },
           {
             year: '2019~2021',
-            title: 'Part-time backend and frontend engineer in a Web company',
+            title: 'Part-time backend and frontend developer in a Web company',
             content: 'Joined a web company and some project. Developed some hybrid apps, web apps and sites.',
             env: 'PHP, JavaScript, Cordova, Bash, Python'
           }
