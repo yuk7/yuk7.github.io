@@ -8,7 +8,6 @@
         <v-list-item prepend-avatar="https://avatars.githubusercontent.com/u/2550010" title="hdk5" href="https://hdk5.xyz/"/>
         <v-list-item prepend-avatar="https://avatars.githubusercontent.com/u/76040821" title="bagussona" href="http://bagussona.github.io/"/>
         <v-list-item prepend-avatar="https://avatars.githubusercontent.com/u/64476715" title="jaycedotbin" href="http://jaycedotbin.vercel.app/"/>
-        <v-list-item prepend-avatar="https://avatars.githubusercontent.com/u/5271091" title="euxn" href="https://blog.euxn.me"/>
       </v-list>
     </v-card>
   </v-container>
