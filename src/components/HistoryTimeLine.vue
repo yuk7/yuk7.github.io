@@ -1,6 +1,6 @@
 <template>
-    <v-timeline density="end">
-        <v-timeline-item v-for="(item, i) in items" :key="i" size="8px" iconColor="blue">
+    <v-timeline density="comfotable">
+        <v-timeline-item v-for="(item, i) in items" :key="i" size="8" dotColor="black" fill-dot>
           <v-container class="fill-height">
             <div>{{ item.year }}</div>
             <div>
