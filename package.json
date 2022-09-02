@@ -12,11 +12,11 @@
     "@mdi/font": "^7.0.96",
     "axios": "^0.27.2",
     "core-js": "^3.21.1",
-    "particles.vue3": "^2.2.0",
+    "particles.vue3": "^2.2.4",
     "roboto-fontface": "*",
     "vue": "^3.2.31",
     "vue-gtag-next": "^1.14.0",
-    "vue-router": "^4.0.13",
+    "vue-router": "^4.1.5",
     "vuetify": "^3.0.0-beta.7",
     "webfontloader": "^1.0.0"
   },
@@ -34,7 +34,7 @@
     "eslint-plugin-vue": "^8.5.0",
     "sass": "^1.49.9",
     "sass-loader": "^13.0.2",
-    "typescript": "~4.7.4",
+    "typescript": "~4.8.2",
     "vue-cli-plugin-vuetify": "~2.5.1",
     "webpack-plugin-vuetify": "^2.0.0-alpha.12"
   }
