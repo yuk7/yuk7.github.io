@@ -1,7 +1,7 @@
 # yuk7.is-a.dev
 My personal website.
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/yuk7/yuk7.github.io/Node.js%20Build%20CI?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/yuk7/yuk7.github.io/build.yml?style=flat-square)
 ![License](https://img.shields.io/github/license/yuk7/yuk7.github.io.svg?style=flat-square)
 
 ## Environment
