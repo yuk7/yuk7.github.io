@@ -54,11 +54,12 @@
 
     <v-card class="mx-auto" elevation="4" max-width="500" title="Skills">
       <v-list lines="two">
-        <v-list-item prependIcon="mdi mdi-linux" title="Linux" subtitle="kernel build, user side, server settings" />
-        <v-list-item prependIcon="mdi mdi-package-variant" title="Container Techs" subtitle="Docker, LXC, nspawn" />
-        <v-list-item prependIcon="mdi mdi-web" title="Web Development" subtitle="JavaScript, PHP, Java" />
-        <v-list-item prependIcon="mdi mdi-android" title="Android App Development" subtitle="Java, Kotlin, Cordova" />
+        <v-list-item prependIcon="mdi mdi-linux" title="Linux" subtitle="Kernel build, User side, Server settings" />
+        <v-list-item prependIcon="mdi mdi-package-variant" title="Virtualization + Container Techs" subtitle="Docker, LXC, WSL" />
+        <v-list-item prependIcon="mdi mdi-android" title="Android + Mobile App Development" subtitle="Java, Kotlin, KMP, Cordova" />
+        <v-list-item prependIcon="mdi mdi-web" title="Web Development" subtitle="JavaScript, PHP, Java, Go" />
         <v-list-item prependIcon="mdi mdi-dot-net" title=".NET Development" subtitle="C#, VB.NET, WinForms, WPF" />
+        <v-list-item prependIcon="mdi mdi-server" title="IT Operations" subtitle="Computer and Server Operations" />
       </v-list>
     </v-card>
 
@@ -123,9 +124,9 @@ export default defineComponent({
       history: [
         {
           year: '2013~2015',
-          title: 'Robotics Contest Club Activity in JHS',
-          content: 'Participated in some robotics contests as a club activity. Experienced as the technical leader and programmer in the team. Our team won a special award in a area tournament.',
-          env: 'C, C#, AVR, STM32'
+          title: 'Robotics Contest at JHS Club Activities',
+          content: 'Participated in some robotics contests as a club activity. Our team won a special award in a area tournament.',
+          env: 'C, C#, Hardware'
         },
         {
           year: '2015~2018',
@@ -134,9 +135,9 @@ export default defineComponent({
           env: 'C, JavaScript'
         },
         {
-          year: '2018~',
+          year: '2018~2022',
           title: 'Computer Science Student in a College',
-          content: 'Learned programming and computer science in college. Joined a programming club and some hackathon. My research&production work won a special incentive award on campus.',
+          content: 'Learned programming and computer science in a college. Joined a programming club and some hackathon. My research&production work won a special incentive award on campus.',
           env: 'C#, Java, PHP, Python, R, WPF, Servlet, JSP, Spring'
         },
         {
@@ -144,6 +145,12 @@ export default defineComponent({
           title: 'Part-time backend and frontend developer in a Web company',
           content: 'Joined a web company and some project. Developed some hybrid apps, web apps and sites.',
           env: 'PHP, JavaScript, Cordova, Bash, Python'
+        },
+        {
+          year: '2022~',
+          title: 'Full-time mobile app developer in a Web company',
+          content: 'Joined a web company and some project. Developed some apps.',
+          env: 'Java, Kotlin, JavaScript, Bash'
         }
       ],
     }
