@@ -5,7 +5,6 @@
       <v-spacer />
       <div class="d-none d-sm-flex">
         <v-btn class="mr-3" to="/">Home</v-btn>
-        <v-btn class="mr-3" to="/works">Works</v-btn>
         <v-btn class="mr-3" href="/blog">Blog</v-btn>
         <v-btn class="mr-3" to="/repos">Repositories</v-btn>
         <v-btn class="mr-3" to="/links">Links</v-btn>
@@ -24,11 +23,6 @@
       <v-btn to="/">
         <v-icon>mdi mdi-home</v-icon>
         <span>Home</span>
-      </v-btn>
-
-      <v-btn to="/works">
-        <v-icon>mdi mdi-briefcase</v-icon>
-        <span>Works</span>
       </v-btn>
 
       <v-btn href="/blog">
