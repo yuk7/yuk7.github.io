@@ -9,7 +9,7 @@
               <v-icon>mdi mdi-cake-variant</v-icon> Jan. 2000
             </p>
             <p>
-              <v-icon>mdi mdi-city</v-icon> Japan
+              <v-icon>mdi mdi-city</v-icon> Tokyo, Japan
             </p>
             <p>
               <v-icon>mdi mdi-heart</v-icon> Linux/Android Udon/Chocolate/Mint
