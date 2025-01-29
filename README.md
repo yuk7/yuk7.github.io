@@ -1,4 +1,4 @@
-# yuk7.is-a.dev
+# yuk7.dev
 My personal website.
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/yuk7/yuk7.github.io/build.yml?style=flat-square)
