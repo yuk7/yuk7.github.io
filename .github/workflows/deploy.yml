@@ -1,34 +1,39 @@
-name: Node.js Deploy CI
+name: Deploy
 
 on:
   push:
     branches:
       - source
 
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '17.x'
-    - name: Build
-      run: |
-        npm install
-        npm run build
-    - name: Setup Git
-      run: |
-        git config --global user.name "bot"
-        git config --global user.email "${{secrets.ACTIONS_EMAIL}}"
-    - name: Deploy
-      run: |
-        git clone https://${{github.actor}}:${{github.token}}@github.com/${{github.repository}} -b main --depth 1 dist-branch
-        mv dist-branch/.git dist/
-        cd dist
-        git add .
-        git commit --allow-empty -m "built from ${{github.sha}}"
-        git push --force-with-lease origin main
-        
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version: "24.x"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to main branch
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # v4.0.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
+          publish_branch: main
+          commit_message: "built from ${{ github.sha }}"

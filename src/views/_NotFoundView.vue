@@ -1,24 +1,16 @@
 <template>
-<v-container class="nfpage">
-    <v-card max-width="600px" class="card">
-        <v-card-title>Page Not found<span>:(</span></v-card-title>
-        <v-card-text class="text--primary">
-            <div>The page you're looking for can't be found.</div>
-            <div>You may have mistyped the address or the page may have moved.</div>
-        </v-card-text>
-        <v-card-actions>
-            <v-btn to="/">Go to Top</v-btn>
-        </v-card-actions>
+  <v-container class="d-flex align-center justify-center" style="min-height: 60vh">
+    <v-card max-width="500" elevation="4" rounded="lg">
+      <v-card-title class="text-h5 pt-4">
+        Page Not Found <span class="text-medium-emphasis">:(</span>
+      </v-card-title>
+      <v-card-text>
+        <p>The page you're looking for can't be found.</p>
+        <p>You may have mistyped the address or the page may have moved.</p>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn variant="tonal" to="/">Go to Top</v-btn>
+      </v-card-actions>
     </v-card>
-</v-container>
+  </v-container>
 </template>
-
-<style>
-    .nfpage {
-        height: 40vh;
-    }
-    .card {
-        top: 50%;
-        margin: 10px auto;
-    }
-</style>
