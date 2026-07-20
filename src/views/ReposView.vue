@@ -81,18 +81,18 @@
 
     <v-row>
       <v-col v-for="repo in orderedRepos" :key="repo.id" cols="12" sm="6" lg="4">
-        <v-card class="repo-card" elevation="3" rounded="lg" height="100%">
+        <v-card class="d-flex flex-column" elevation="3" rounded="lg" height="100%">
           <v-card-item>
             <v-card-title>{{ repo.name }}</v-card-title>
             <v-card-subtitle>{{ formatDate(repo.updated_at) }}</v-card-subtitle>
           </v-card-item>
-          <v-card-text class="repo-description">{{
+          <v-card-text class="flex-grow-1">{{
             repo.description ?? "No description provided."
           }}</v-card-text>
-          <v-card-actions class="repo-actions">
+          <v-card-actions class="d-flex flex-column align-stretch ga-2 pt-0">
             <v-btn
-              class="repo-link-btn"
               variant="outlined"
+              block
               :href="repo.html_url"
               target="_blank"
               rel="noopener"
@@ -100,17 +100,17 @@
               View on GitHub
             </v-btn>
 
-            <div class="repo-meta">
-              <div class="repo-meta-item">
+            <div class="d-flex flex-wrap ga-3">
+              <div class="d-inline-flex align-center ga-1">
                 <v-icon size="small">mdi-star</v-icon>
                 <span class="text-caption">{{ repo.stargazers_count }}</span>
               </div>
-              <div class="repo-meta-item">
+              <div class="d-inline-flex align-center ga-1">
                 <v-icon size="small">mdi-source-fork</v-icon>
                 <span class="text-caption">{{ repo.forks_count }}</span>
               </div>
               <template v-if="repo.language">
-                <div class="repo-meta-item">
+                <div class="d-inline-flex align-center ga-1">
                   <v-icon size="small">mdi-xml</v-icon>
                   <span class="text-caption">{{ repo.language }}</span>
                 </div>
@@ -159,44 +159,3 @@ onMounted(() => {
   reposStore.fetchRepos();
 });
 </script>
-
-<style scoped>
-.repo-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.repo-description {
-  flex: 1;
-}
-
-.repo-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0.65rem;
-  padding-top: 0;
-}
-
-.repo-link-btn {
-  align-self: flex-start;
-}
-
-.repo-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.repo-meta-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-@media (max-width: 600px) {
-  .repo-link-btn {
-    width: 100%;
-  }
-}
-</style>

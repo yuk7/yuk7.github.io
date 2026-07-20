@@ -3,21 +3,21 @@
     <div class="aurora aurora-a" :class="{ 'aurora-light': theme === 'light' }" />
     <div class="aurora aurora-b" :class="{ 'aurora-light': theme === 'light' }" />
 
-    <v-app-bar class="topbar" :class="{ 'topbar-light': theme === 'light' }" flat>
+    <v-app-bar class="topbar" color="surface" rounded="xl" elevation="8" border>
       <v-app-bar-title class="brand">
         <span class="brand-dot" />
         yuk7.dev
       </v-app-bar-title>
       <v-spacer />
       <div class="d-none d-sm-flex align-center ga-1">
-        <v-btn variant="text" class="nav-pill" to="/">Home</v-btn>
-        <v-btn variant="text" class="nav-pill" href="https://yuk7.dev/blog/">Blog</v-btn>
-        <v-btn variant="text" class="nav-pill" to="/repos/">Repos</v-btn>
-        <v-btn variant="text" class="nav-pill" to="/links/">Links</v-btn>
+        <v-btn variant="text" rounded="pill" to="/">Home</v-btn>
+        <v-btn variant="text" rounded="pill" href="https://yuk7.dev/blog/">Blog</v-btn>
+        <v-btn variant="text" rounded="pill" to="/repos/">Repos</v-btn>
+        <v-btn variant="text" rounded="pill" to="/links/">Links</v-btn>
       </div>
       <v-btn
         :icon="theme === 'dark' ? 'mdi-white-balance-sunny' : 'mdi-weather-night'"
-        class="theme-switch"
+        rounded="pill"
         variant="tonal"
         @click="toggleTheme"
       />
@@ -29,8 +29,10 @@
 
     <v-bottom-navigation
       class="mobile-nav d-flex d-sm-none"
-      :class="{ 'mobile-nav-light': theme === 'light' }"
-      bg-color="transparent"
+      bg-color="surface"
+      rounded="xl"
+      elevation="8"
+      border
       grow
     >
       <v-btn to="/">
@@ -59,18 +61,6 @@
   --accent-a: #30d5c8;
   --accent-b: #00a3ff;
   --accent-c: #ff7b54;
-  --text: #e8f6ff;
-  --glass: rgba(10, 18, 40, 0.56);
-  /* card */
-  --card-bg: linear-gradient(150deg, rgba(7, 16, 38, 0.75), rgba(20, 30, 66, 0.55));
-  --card-border: rgba(255, 255, 255, 0.14);
-  --card-hover-shadow: 0 12px 24px rgba(3, 10, 30, 0.45);
-  /* text */
-  --subtitle-color: rgba(232, 246, 255, 0.82);
-  /* avatar ring */
-  --avatar-ring-border: rgba(255, 255, 255, 0.16);
-  --avatar-ring-glow: rgba(0, 163, 255, 0.12);
-  --friend-avatar-glow: rgba(48, 213, 200, 0.12);
 
   min-height: 100vh;
   background:
@@ -83,16 +73,6 @@
 
 /* Light theme overrides */
 .v-application.v-theme--light {
-  --text: #1e293b;
-  --glass: rgba(255, 255, 255, 0.86);
-  --card-bg: linear-gradient(150deg, rgba(255, 255, 255, 0.93), rgba(242, 247, 255, 0.87));
-  --card-border: rgba(15, 23, 42, 0.12);
-  --card-hover-shadow: 0 10px 20px rgba(15, 23, 42, 0.18);
-  --subtitle-color: rgba(30, 41, 59, 0.82);
-  --avatar-ring-border: rgba(15, 23, 42, 0.12);
-  --avatar-ring-glow: rgba(0, 163, 255, 0.08);
-  --friend-avatar-glow: rgba(0, 163, 255, 0.1);
-
   background:
     radial-gradient(circle at 15% 20%, rgba(0, 163, 255, 0.1), transparent 30%),
     radial-gradient(circle at 85% 10%, rgba(255, 123, 84, 0.09), transparent 28%),
@@ -134,14 +114,9 @@
   position: sticky;
   top: 0.7rem;
   margin: 0.7rem auto 0;
-  width: min(96vw, 1120px);
-  border-radius: 18px;
-  background: var(--glass);
+  width: min(calc(100% - 1rem), 1120px);
   backdrop-filter: blur(14px);
   z-index: 4;
-  /* dark default */
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 30px rgba(2, 8, 24, 0.4);
 }
 
 .brand {
@@ -160,22 +135,11 @@
   box-shadow: 0 0 0 6px rgba(48, 213, 200, 0.15);
 }
 
-.nav-pill {
-  border-radius: 9999px;
-  padding-inline: 1.05rem;
-  text-transform: none;
-  font-weight: 600;
-}
-
-.theme-switch {
-  border-radius: 9999px;
-}
-
 /* ── Main / page ── */
 .main-shell {
   position: relative;
   z-index: 1;
-  padding-top: 1.6rem;
+  padding-top: 4rem;
   padding-bottom: 0.6rem;
 }
 
@@ -186,40 +150,25 @@
 
 /* ── Mobile nav ── */
 .mobile-nav {
-  width: calc(100% - 1rem);
-  margin: 0 0.5rem 0.55rem;
-  border-radius: 16px;
-  background: var(--glass);
+  inset-inline: 0.5rem;
+  width: auto;
+  margin-bottom: 0.55rem;
   backdrop-filter: blur(10px);
-  /* dark default */
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-/* ── Light theme overrides for scoped elements ── */
-.topbar-light {
-  border: 1px solid rgba(15, 23, 42, 0.14) !important;
-  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12) !important;
-}
-
-.mobile-nav-light {
-  border: 1px solid rgba(15, 23, 42, 0.14) !important;
 }
 
 .aurora-light {
-  opacity: 0.18 !important;
+  opacity: 0.18;
 }
 
 /* ── Responsive ── */
 @media (max-width: 600px) {
   .topbar {
     top: 0.45rem;
-    width: calc(100vw - 0.7rem);
     margin-top: 0.45rem;
-    border-radius: 14px;
   }
 
   .main-shell {
-    padding-top: 1rem;
+    padding-top: 3.5rem;
     padding-bottom: 4.9rem;
   }
 

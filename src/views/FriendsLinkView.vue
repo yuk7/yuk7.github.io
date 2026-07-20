@@ -11,9 +11,9 @@
 
     <v-row>
       <v-col v-for="link in links" :key="link.title" cols="12" sm="6" lg="4">
-        <v-card class="friend-card h-100" rounded="lg" elevation="6">
+        <v-card class="h-100" color="surface" rounded="lg" elevation="6" border hover>
           <v-card-text class="pa-5 d-flex align-center ga-4">
-            <v-avatar size="56" class="friend-avatar">
+            <v-avatar size="56">
               <v-img :src="link.avatar" :alt="link.title" />
             </v-avatar>
             <div>
@@ -95,23 +95,5 @@ const links = [
 <style scoped>
 .links-wrap {
   max-width: 1080px;
-}
-
-.friend-card {
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
-  backdrop-filter: blur(8px);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.friend-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--card-hover-shadow);
-}
-
-.friend-avatar {
-  box-shadow: 0 0 0 4px var(--friend-avatar-glow);
 }
 </style>

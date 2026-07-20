@@ -1,6 +1,14 @@
 <template>
   <v-container class="py-8 d-flex align-center justify-center" style="min-height: 70vh">
-    <v-card max-width="700" rounded="xl" elevation="8" class="pa-3 blog-card">
+    <v-card
+      max-width="700"
+      rounded="xl"
+      elevation="8"
+      class="pa-3"
+      color="surface"
+      variant="tonal"
+      border
+    >
       <v-card-item>
         <v-icon size="48" color="primary" class="mb-2">mdi-post-outline</v-icon>
         <v-card-title class="text-h4 font-weight-bold">Blog Lives at /blog/</v-card-title>
@@ -19,10 +27,3 @@
     </v-card>
   </v-container>
 </template>
-
-<style scoped>
-.blog-card {
-  background: linear-gradient(160deg, rgba(21, 101, 192, 0.12), rgba(0, 188, 212, 0.1));
-  backdrop-filter: blur(6px);
-}
-</style>

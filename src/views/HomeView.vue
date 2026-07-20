@@ -2,17 +2,19 @@
   <v-container class="home-wrap py-6 py-md-9">
     <v-row class="mb-5" justify="center">
       <v-col cols="12" sm="10" md="7" lg="5">
-        <v-card class="identity-card" rounded="xl" elevation="8">
-          <v-card-text class="pa-8 text-center d-flex flex-column align-center">
-            <v-avatar :size="160" class="mb-5 profile-ring">
+        <v-card color="surface" rounded="xl" elevation="8" border>
+          <v-card-text class="pa-4 pa-sm-8 text-center d-flex flex-column align-center">
+            <v-avatar :size="160" class="mb-5">
               <v-img src="https://avatars.githubusercontent.com/u/29954265?v=4" />
             </v-avatar>
             <h1 class="text-h3 font-weight-bold mb-1">yuk7</h1>
-            <p class="text-medium-emphasis mb-6">Jan 2000 · Tokyo, Japan</p>
+            <p class="text-medium-emphasis mb-2">Software Engineer</p>
+            <p class="text-medium-emphasis mb-5">Tokyo, Japan</p>
 
             <div class="social-row d-flex justify-center ga-3 flex-wrap">
               <v-btn
                 icon
+                rounded="pill"
                 variant="tonal"
                 size="large"
                 @click="dialog_email = true"
@@ -22,6 +24,7 @@
               </v-btn>
               <v-btn
                 icon
+                rounded="pill"
                 variant="tonal"
                 size="large"
                 href="https://t.me/yuk_7"
@@ -44,6 +47,7 @@
               </v-btn>
               <v-btn
                 icon
+                rounded="pill"
                 variant="tonal"
                 size="large"
                 href="https://github.com/yuk7"
@@ -55,6 +59,7 @@
               </v-btn>
               <v-btn
                 icon
+                rounded="pill"
                 variant="tonal"
                 size="large"
                 href="https://keybase.io/yuk7"
@@ -62,10 +67,21 @@
                 rel="noopener"
                 aria-label="keybase"
               >
-                <v-icon>mdi-key-chain-variant</v-icon>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10.445 21.372a.953.953 0 1 1-.955-.954c.524 0 .951.43.951.955m5.923-.001a.953.953 0 1 1-.958-.954c.526 0 .954.43.954.955m4.544-9.16l-.156-.204c-.046-.06-.096-.116-.143-.175-.045-.06-.094-.113-.141-.169-.104-.12-.21-.239-.32-.359l-.075-.08-.091-.099-.135-.13c-.015-.019-.032-.035-.05-.054a10.87 10.87 0 0 0-3.955-2.504l-.23-.078.035-.083a4.109 4.109 0 0 0-.12-3.255 4.11 4.11 0 0 0-2.438-2.16c-.656-.216-1.23-.319-1.712-.305-.033-.105-.1-.577.496-1.848L10.662 0l-.287.399c-.33.455-.648.895-.945 1.328a1.857 1.857 0 0 0-1.245-.58L6.79 1.061h-.012c-.033-.003-.07-.003-.104-.003-.99 0-1.81.771-1.87 1.755l-.088 1.402v.003a1.876 1.876 0 0 0 1.755 1.98l1.002.06c-.065.84.073 1.62.405 2.306a11.28 11.28 0 0 0-3.66 2.484C.912 14.392.912 18.052.912 20.995v1.775l1.305-1.387c.266.93.652 1.807 1.145 2.615H5.06a9.197 9.197 0 0 1-1.68-3.848l1.913-2.03-.985 3.09 1.74-1.267c3.075-2.234 6.745-2.75 10.91-1.53 1.806.533 3.56.04 4.474-1.256l.104-.165c.09.498.14.998.14 1.496 0 1.563-.254 3.687-1.38 5.512h1.612c.776-1.563 1.181-3.432 1.181-5.512-.001-2.2-.786-4.421-2.184-6.274zM8.894 6.192c.122-1.002.577-1.949 1.23-2.97a1.36 1.36 0 0 0 1.283.749c.216-.008.604.025 1.233.232a2.706 2.706 0 0 1 1.608 1.425c.322.681.349 1.442.079 2.15a2.69 2.69 0 0 1-.806 1.108l-.408-.502-.002-.003a1.468 1.468 0 0 0-2.06-.205c-.334.27-.514.66-.534 1.058-1.2-.54-1.8-1.643-1.628-3.04zm4.304 5.11l-.52.425a.228.228 0 0 1-.323-.032l-.11-.135a.238.238 0 0 1 .034-.334l.51-.42-1.056-1.299a.307.307 0 0 1 .044-.436.303.303 0 0 1 .435.041l2.963 3.646a.309.309 0 0 1-.168.499.315.315 0 0 1-.31-.104l-.295-.365-1.045.854a.244.244 0 0 1-.154.055.237.237 0 0 1-.186-.09l-.477-.58a.24.24 0 0 1 .035-.335l1.05-.858-.425-.533zM7.752 4.866l-1.196-.075a.463.463 0 0 1-.435-.488l.09-1.4a.462.462 0 0 1 .461-.437h.024l1.401.091a.459.459 0 0 1 .433.488l-.007.101a9.27 9.27 0 0 0-.773 1.72zm12.525 11.482c-.565.805-1.687 1.08-2.924.718-3.886-1.141-7.397-.903-10.469.7l1.636-5.122-5.29 5.609c.098-3.762 2.452-6.967 5.757-8.312.471.373 1.034.66 1.673.841.16.044.322.074.48.102a1.41 1.41 0 0 0 .21 1.408l.075.09c-.172.45-.105.975.221 1.374l.476.582a1.39 1.39 0 0 0 1.079.513c.32 0 .635-.111.886-.314l.285-.232c.174.074.367.113.566.113a1.45 1.45 0 0 0 .928-.326c.623-.51.72-1.435.209-2.06l-1.67-2.057a4.07 4.07 0 0 0 .408-.38c.135.036.27.077.4.12.266.096.533.197.795.314a9.55 9.55 0 0 1 2.77 1.897c.03.03.06.055.086.083l.17.176c.038.039.076.079.11.12.08.085.16.175.24.267l.126.15c.045.053.086.104.13.16l.114.15c.04.05.079.102.117.154.838 1.149.987 2.329.404 3.157v.005zM7.718 4.115l-.835-.05.053-.836.834.051z"
+                  />
+                </svg>
               </v-btn>
               <v-btn
                 icon
+                rounded="pill"
                 variant="tonal"
                 size="large"
                 href="https://paypal.me/yuk77"
@@ -89,6 +105,7 @@
               </v-btn>
               <v-btn
                 icon
+                rounded="pill"
                 variant="tonal"
                 size="large"
                 @click="dialog_btc = true"
@@ -104,7 +121,7 @@
 
     <v-row class="mb-5">
       <v-col cols="12" md="4" v-for="item in quickStats" :key="item.label">
-        <v-card class="stat-card" rounded="lg" elevation="4">
+        <v-card color="surface" rounded="lg" elevation="4" border>
           <v-card-text>
             <div class="d-flex align-center ga-2 mb-1">
               <v-icon>{{ item.icon }}</v-icon>
@@ -118,15 +135,14 @@
 
     <v-row class="mb-5">
       <v-col cols="12" md="6">
-        <v-card class="panel-card h-100" rounded="lg" elevation="6">
+        <v-card class="h-100" color="surface" rounded="lg" elevation="6" border>
           <v-card-title class="font-weight-bold">Core Stack</v-card-title>
           <v-card-text>
             <div class="d-flex flex-wrap ga-2">
               <v-chip
                 v-for="skill in stackSkills"
                 :key="skill"
-                variant="elevated"
-                color="indigo-lighten-1"
+                variant="tonal"
                 >{{ skill }}</v-chip
               >
             </div>
@@ -135,32 +151,83 @@
       </v-col>
 
       <v-col cols="12" md="6">
-        <v-card class="panel-card h-100" rounded="lg" elevation="6">
-          <v-card-title class="font-weight-bold">What I enjoy building</v-card-title>
+        <v-card class="h-100" color="surface" rounded="lg" elevation="6" border>
+          <v-card-title class="font-weight-bold">Focus Areas</v-card-title>
           <v-list bg-color="transparent" density="compact" lines="two">
             <v-list-item
-              prepend-icon="mdi-cellphone-link"
-              title="Mobile-first experiences"
-              subtitle="Android apps with practical UX and stable delivery"
-            />
-            <v-list-item
-              prepend-icon="mdi-server-network"
-              title="Systems that stay healthy"
-              subtitle="Monitoring, automation, and low-maintenance deployments"
-            />
-            <v-list-item
-              prepend-icon="mdi-rocket-launch-outline"
-              title="Fast iteration loops"
-              subtitle="Tooling and architecture that keeps teams shipping"
+              v-for="item in focusAreas"
+              :key="item.title"
+              :prepend-icon="item.icon"
+              :title="item.title"
+              :subtitle="item.subtitle"
             />
           </v-list>
         </v-card>
       </v-col>
     </v-row>
 
-    <v-card class="panel-card" rounded="xl" elevation="6" title="Life Experience">
-      <HistoryTimeLine :items="history" />
-    </v-card>
+    <v-row class="mb-5">
+      <v-col cols="12">
+        <v-card color="surface" rounded="lg" elevation="6" border>
+          <v-card-title class="font-weight-bold">Skills</v-card-title>
+          <v-card-text>
+            <v-row>
+              <v-col v-for="group in skillGroups" :key="group.title" cols="12" md="6">
+                <v-sheet class="h-100 pa-4" rounded="lg" color="surface" variant="tonal" border>
+                  <div class="d-flex align-center ga-2 mb-2">
+                    <v-icon>{{ group.icon }}</v-icon>
+                    <div class="text-h6 font-weight-bold">{{ group.title }}</div>
+                  </div>
+                  <p class="text-body-2 text-medium-emphasis mb-3">{{ group.description }}</p>
+                  <div class="d-flex ga-2 flex-wrap">
+                    <v-chip
+                      v-for="tag in group.tags"
+                      :key="`${group.title}-${tag}`"
+                      size="small"
+                      variant="tonal"
+                    >
+                      {{ tag }}
+                    </v-chip>
+                  </div>
+                </v-sheet>
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <v-row class="mb-5">
+      <v-col cols="12" md="7">
+        <v-card class="h-100" color="surface" rounded="lg" elevation="6" border>
+          <v-card-title class="font-weight-bold">Background</v-card-title>
+          <v-list bg-color="transparent" density="compact" lines="two">
+            <v-list-item
+              v-for="item in background"
+              :key="item.period"
+              prepend-icon="mdi-timeline-text-outline"
+              :title="`${item.period} - ${item.title}`"
+              :subtitle="item.subtitle"
+            />
+          </v-list>
+        </v-card>
+      </v-col>
+
+      <v-col cols="12" md="5">
+        <v-card class="h-100" color="surface" rounded="lg" elevation="6" border>
+          <v-card-title class="font-weight-bold">Current Signals</v-card-title>
+          <v-list bg-color="transparent" density="compact" lines="two">
+            <v-list-item
+              v-for="item in currentSignals"
+              :key="item.title"
+              :prepend-icon="item.icon"
+              :title="item.title"
+              :subtitle="item.subtitle"
+            />
+          </v-list>
+        </v-card>
+      </v-col>
+    </v-row>
 
     <v-dialog v-model="dialog_email">
       <v-card title="Email">
@@ -193,56 +260,119 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import HistoryTimeLine from "@/components/HistoryTimeLine.vue";
 
 const dialog_email = ref(false);
 const dialog_btc = ref(false);
 
 const quickStats = [
   {
-    label: "Primary Focus",
-    value: "Mobile + Web Product Engineering",
+    label: "Main Field",
+    value: "Mobile + Web Development",
     icon: "mdi-lightning-bolt-outline",
   },
-  { label: "Ops Comfort Zone", value: "Linux Servers, Docker, WSL", icon: "mdi-server" },
-  { label: "Fav Flavors", value: "Udon / Chocolate / Mint", icon: "mdi-food-variant" },
+  { label: "Comfort Zone", value: "Linux, Servers, WSL", icon: "mdi-linux" },
+  { label: "Daily Drive OS", value: "Arch Linux / Windows 11", icon: "mdi-monitor" },
 ];
 
-const stackSkills = ["Kotlin", "Java", "TypeScript", "Vue", "Go", "PHP", "Linux", "Docker", "WSL"];
+const stackSkills = [
+  "C#",
+  "Kotlin",
+  "Java",
+  "Swift",
+  "Go",
+  "Shell",
+  "TypeScript",
+  "Vue",
+  "Flutter",
+  "PHP",
+  "Linux",
+  "WSL",
+  "Docker",
+];
 
-const history = [
+const focusAreas = [
   {
-    year: "2013~2015",
-    title: "Robotics Contest at JHS Club Activities",
-    content:
-      "Participated in some robotics contests as a club activity. Our team won a special award in a area tournament.",
-    env: "C, C#, Hardware",
+    title: "Mobile app development",
+    subtitle: "Android apps, hybrid apps, and practical UI flows",
+    icon: "mdi-cellphone-link",
   },
   {
-    year: "2015~2018",
-    title: "Teaching Assistant in SHS",
-    content: "Teaching Assistant in C language and JavaScript classes.",
-    env: "C, JavaScript",
+    title: "Web development",
+    subtitle: "Frontend, backend, and small tools that support everyday workflows",
+    icon: "mdi-web",
   },
   {
-    year: "2018~2022",
-    title: "Computer Science Student in a College",
-    content:
-      "Learned programming and computer science in a college. Joined a programming club and some hackathon. My research & production work won a special incentive award on campus.",
-    env: "C#, Java, PHP, Python, R, WPF, Servlet, JSP, Spring",
+    title: "Systems and operations",
+    subtitle: "Linux, containers, servers, and automation for maintainable environments",
+    icon: "mdi-server-network",
+  },
+];
+
+const skillGroups = [
+  {
+    title: "Linux",
+    description: "Kernel builds, user-side tooling, server settings, and daily desktop use.",
+    icon: "mdi-linux",
+    tags: ["Arch Linux", "Shell", "Servers"],
   },
   {
-    year: "2019~2021",
-    title: "Part-time backend and frontend developer in a Web company",
-    content:
-      "Joined a web company and some project. Developed some hybrid apps, web apps and sites.",
-    env: "PHP, JavaScript, Cordova, Bash, Python",
+    title: "Virtualization + Containers",
+    description: "Local development and runtime environments across lightweight system layers.",
+    icon: "mdi-package-variant-closed",
+    tags: ["Docker", "LXC", "WSL"],
   },
   {
-    year: "2022~",
-    title: "Full-time mobile app developer in a Web company",
-    content: "Joined a web company and some project. Developed some apps.",
-    env: "Java, Kotlin, JavaScript, Bash",
+    title: "Android + Mobile Apps",
+    description: "Native and hybrid app development with attention to practical delivery.",
+    icon: "mdi-android",
+    tags: ["Java", "Kotlin", "Flutter", "Cordova"],
+  },
+  {
+    title: "Web + Desktop Apps",
+    description: "Web apps, backend work, and desktop application experiments.",
+    icon: "mdi-application-braces",
+    tags: ["TypeScript", "PHP", "Go", "C#"],
+  },
+];
+
+const background = [
+  {
+    period: "2013-2015",
+    title: "Robotics club contests",
+    subtitle: "Built contest robots and learned programming through hands-on hardware work",
+  },
+  {
+    period: "2018-2022",
+    title: "Computer science college student",
+    subtitle: "Studied computer science, joined hackathons, and built practical software projects",
+  },
+  {
+    period: "2019-2021",
+    title: "Part-time web developer",
+    subtitle: "Developed hybrid apps, web services, websites, and automation tools for production use",
+  },
+  {
+    period: "2022-",
+    title: "Full-time mobile app developer",
+    subtitle: "Developing mobile apps while continuing work on systems, tooling, and developer environments",
+  },
+];
+
+const currentSignals = [
+  {
+    title: "Daily environments",
+    subtitle: "Linux, Windows, Android, VS Code, IntelliJ IDEA, and KDE",
+    icon: "mdi-monitor-dashboard",
+  },
+  {
+    title: "Also interested in",
+    subtitle: "WSL distributions, containers, dotfiles, and small developer tools",
+    icon: "mdi-tools",
+  },
+  {
+    title: "Contact",
+    subtitle: "Email, Keybase, Telegram, GitHub, and PayPal are linked above",
+    icon: "mdi-send-outline",
   },
 ];
 </script>
@@ -250,19 +380,6 @@ const history = [
 <style scoped>
 .home-wrap {
   max-width: 1080px;
-}
-
-.identity-card,
-.panel-card,
-.stat-card {
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
-  backdrop-filter: blur(10px);
-}
-
-.profile-ring {
-  border: 2px solid var(--avatar-ring-border);
-  box-shadow: 0 0 0 10px var(--avatar-ring-glow);
 }
 
 .mono {
@@ -273,14 +390,4 @@ const history = [
   max-width: 340px;
 }
 
-.social-row .v-btn {
-  border-radius: 9999px;
-}
-
-@media (max-width: 600px) {
-  .identity-card > :deep(.v-card-text),
-  .panel-card > :deep(.v-card-text) {
-    padding: 1rem !important;
-  }
-}
 </style>
