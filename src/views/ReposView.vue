@@ -1,21 +1,16 @@
 <template>
   <v-container class="py-6">
     <v-row class="mb-3" align="center">
-      <v-col cols="12" md="6">
+      <v-col cols="12">
         <h1 class="text-h4 font-weight-bold">Repositories</h1>
-        <p class="text-medium-emphasis mb-0">Filter and scan recent work faster.</p>
-      </v-col>
-      <v-col cols="12" md="6" class="d-flex justify-md-end">
-        <v-btn variant="tonal" prepend-icon="mdi-refresh" @click="reposStore.fetchRepos(true)">
-          Refresh
-        </v-btn>
+        <p class="text-medium-emphasis mb-0">GitHub projects and recent updates.</p>
       </v-col>
     </v-row>
 
-    <v-card class="mb-4" rounded="lg" variant="tonal">
+    <v-card class="translucent-card mb-4" rounded="lg" color="surface" elevation="2" border>
       <v-card-text>
-        <v-row>
-          <v-col cols="12" md="5">
+        <v-row align="center">
+          <v-col cols="12" md="4">
             <v-text-field
               v-model="search"
               prepend-inner-icon="mdi-magnify"
@@ -47,8 +42,17 @@
               hide-details
             />
           </v-col>
-          <v-col cols="12" md="2" class="d-flex align-center">
-            <v-btn variant="text" block @click="reposStore.resetFilters()">Reset</v-btn>
+          <v-col cols="12" md="3" class="d-flex align-center ga-2">
+            <v-btn variant="text" class="flex-grow-1" @click="reposStore.resetFilters()">
+              Reset
+            </v-btn>
+            <v-btn
+              color="primary"
+              variant="tonal"
+              icon="mdi-refresh"
+              aria-label="Refresh repositories"
+              @click="reposStore.fetchRepos(true)"
+            />
           </v-col>
         </v-row>
         <div class="d-flex flex-wrap ga-4 mt-3">
@@ -81,7 +85,14 @@
 
     <v-row>
       <v-col v-for="repo in orderedRepos" :key="repo.id" cols="12" sm="6" lg="4">
-        <v-card class="d-flex flex-column" elevation="3" rounded="lg" height="100%">
+        <v-card
+          class="translucent-card d-flex flex-column"
+          color="surface"
+          elevation="3"
+          rounded="lg"
+          height="100%"
+          border
+        >
           <v-card-item>
             <v-card-title>{{ repo.name }}</v-card-title>
             <v-card-subtitle>{{ formatDate(repo.updated_at) }}</v-card-subtitle>
@@ -159,3 +170,11 @@ onMounted(() => {
   reposStore.fetchRepos();
 });
 </script>
+
+<style scoped>
+.v-card.translucent-card {
+  background-color: rgba(var(--v-theme-surface), 0.66) !important;
+  background-image: none !important;
+  backdrop-filter: blur(14px);
+}
+</style>

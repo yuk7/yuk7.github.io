@@ -1,8 +1,8 @@
 <template>
-  <v-container class="home-wrap py-6 py-md-9">
+  <v-container class="py-6 py-md-9" max-width="1080">
     <v-row class="mb-5" justify="center">
       <v-col cols="12" sm="10" md="7" lg="5">
-        <v-card color="surface" rounded="xl" elevation="8" border>
+        <v-card class="home-card" color="surface" rounded="xl" elevation="8" border>
           <v-card-text class="pa-4 pa-sm-8 text-center d-flex flex-column align-center">
             <v-avatar :size="160" class="mb-5">
               <v-img src="https://avatars.githubusercontent.com/u/29954265?v=4" />
@@ -11,7 +11,7 @@
             <p class="text-medium-emphasis mb-2">Software Engineer</p>
             <p class="text-medium-emphasis mb-5">Tokyo, Japan</p>
 
-            <div class="social-row d-flex justify-center ga-3 flex-wrap">
+            <v-sheet class="d-flex justify-center ga-3 flex-wrap" color="transparent" max-width="340">
               <v-btn
                 icon
                 rounded="pill"
@@ -113,7 +113,7 @@
               >
                 <v-icon>mdi-currency-btc</v-icon>
               </v-btn>
-            </div>
+            </v-sheet>
           </v-card-text>
         </v-card>
       </v-col>
@@ -121,7 +121,7 @@
 
     <v-row class="mb-5">
       <v-col cols="12" md="4" v-for="item in quickStats" :key="item.label">
-        <v-card color="surface" rounded="lg" elevation="4" border>
+        <v-card class="home-card" color="surface" rounded="lg" elevation="4" border>
           <v-card-text>
             <div class="d-flex align-center ga-2 mb-1">
               <v-icon>{{ item.icon }}</v-icon>
@@ -135,7 +135,7 @@
 
     <v-row class="mb-5">
       <v-col cols="12" md="6">
-        <v-card class="h-100" color="surface" rounded="lg" elevation="6" border>
+        <v-card class="home-card h-100" color="surface" rounded="lg" elevation="6" border>
           <v-card-title class="font-weight-bold">Core Stack</v-card-title>
           <v-card-text>
             <div class="d-flex flex-wrap ga-2">
@@ -151,7 +151,7 @@
       </v-col>
 
       <v-col cols="12" md="6">
-        <v-card class="h-100" color="surface" rounded="lg" elevation="6" border>
+        <v-card class="home-card h-100" color="surface" rounded="lg" elevation="6" border>
           <v-card-title class="font-weight-bold">Focus Areas</v-card-title>
           <v-list bg-color="transparent" density="compact" lines="two">
             <v-list-item
@@ -168,12 +168,17 @@
 
     <v-row class="mb-5">
       <v-col cols="12">
-        <v-card color="surface" rounded="lg" elevation="6" border>
+        <v-card class="home-card" color="surface" rounded="lg" elevation="6" border>
           <v-card-title class="font-weight-bold">Skills</v-card-title>
           <v-card-text>
             <v-row>
               <v-col v-for="group in skillGroups" :key="group.title" cols="12" md="6">
-                <v-sheet class="h-100 pa-4" rounded="lg" color="surface" variant="tonal" border>
+                <v-sheet
+                  class="h-100 pa-4"
+                  color="transparent"
+                  rounded="lg"
+                  border
+                >
                   <div class="d-flex align-center ga-2 mb-2">
                     <v-icon>{{ group.icon }}</v-icon>
                     <div class="text-h6 font-weight-bold">{{ group.title }}</div>
@@ -199,13 +204,13 @@
 
     <v-row class="mb-5">
       <v-col cols="12" md="7">
-        <v-card class="h-100" color="surface" rounded="lg" elevation="6" border>
+        <v-card class="home-card h-100" color="surface" rounded="lg" elevation="6" border>
           <v-card-title class="font-weight-bold">Background</v-card-title>
           <v-list bg-color="transparent" density="compact" lines="two">
             <v-list-item
               v-for="item in background"
               :key="item.period"
-              prepend-icon="mdi-timeline-text-outline"
+              prepend-icon="mdi-circle-small"
               :title="`${item.period} - ${item.title}`"
               :subtitle="item.subtitle"
             />
@@ -214,7 +219,7 @@
       </v-col>
 
       <v-col cols="12" md="5">
-        <v-card class="h-100" color="surface" rounded="lg" elevation="6" border>
+        <v-card class="home-card h-100" color="surface" rounded="lg" elevation="6" border>
           <v-card-title class="font-weight-bold">Current Signals</v-card-title>
           <v-list bg-color="transparent" density="compact" lines="two">
             <v-list-item
@@ -245,7 +250,9 @@
       <v-card title="Bitcoin">
         <v-card-text> 1GepqF7fxX1Z2jJsF2tQQNGAvoVYx6syDK </v-card-text>
         <div class="d-flex justify-center">
-          <v-img src="@/assets/img/btc.png" max-width="200px" />
+          <v-sheet :color="theme.current.value.dark ? 'white' : 'transparent'" rounded="lg" class="pa-3">
+            <v-img :src="btcQr" width="200" height="200" eager />
+          </v-sheet>
         </div>
 
         <v-card-actions>
@@ -260,9 +267,12 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { useTheme } from "vuetify";
+import btcQr from "@/assets/img/btc.png";
 
 const dialog_email = ref(false);
 const dialog_btc = ref(false);
+const theme = useTheme();
 
 const quickStats = [
   {
@@ -278,7 +288,6 @@ const stackSkills = [
   "C#",
   "Kotlin",
   "Java",
-  "Swift",
   "Go",
   "Shell",
   "TypeScript",
@@ -378,16 +387,13 @@ const currentSignals = [
 </script>
 
 <style scoped>
-.home-wrap {
-  max-width: 1080px;
-}
-
 .mono {
   font-family: "JetBrains Mono", monospace;
 }
 
-.social-row {
-  max-width: 340px;
+.home-card {
+  background: rgba(var(--v-theme-surface), 0.66) !important;
+  backdrop-filter: blur(14px);
 }
 
 </style>

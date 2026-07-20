@@ -1,5 +1,5 @@
 <template>
-  <v-container class="d-flex align-center justify-center" style="min-height: 60vh">
+  <v-container class="d-flex align-center justify-center" min-height="60vh">
     <v-card max-width="500" elevation="4" rounded="lg">
       <v-card-title class="text-h5 pt-4">
         Page Not Found <span class="text-medium-emphasis">:(</span>

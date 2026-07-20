@@ -1,5 +1,5 @@
 <template>
-  <v-container class="py-8 d-flex align-center justify-center" style="min-height: 70vh">
+  <v-container class="py-8 d-flex align-center justify-center" min-height="70vh">
     <v-card
       max-width="700"
       rounded="xl"

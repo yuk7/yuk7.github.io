@@ -4,8 +4,7 @@
     <div class="aurora aurora-b" :class="{ 'aurora-light': theme === 'light' }" />
 
     <v-app-bar class="topbar" color="surface" rounded="xl" elevation="8" border>
-      <v-app-bar-title class="brand">
-        <span class="brand-dot" />
+      <v-app-bar-title class="font-weight-bold">
         yuk7.dev
       </v-app-bar-title>
       <v-spacer />
@@ -111,28 +110,15 @@
 
 /* ── Top bar ── */
 .topbar {
-  position: sticky;
-  top: 0.7rem;
-  margin: 0.7rem auto 0;
-  width: min(calc(100% - 1rem), 1120px);
+  --topbar-side-space: max(1rem, calc((100vw - 1120px) / 2));
+
+  top: 0.7rem !important;
+  right: var(--topbar-side-space) !important;
+  left: var(--topbar-side-space) !important;
+  width: auto !important;
+  background: rgba(var(--v-theme-surface), 0.56) !important;
   backdrop-filter: blur(14px);
   z-index: 4;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-.brand-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 9999px;
-  background: linear-gradient(160deg, var(--accent-a), var(--accent-b));
-  box-shadow: 0 0 0 6px rgba(48, 213, 200, 0.15);
 }
 
 /* ── Main / page ── */
@@ -150,9 +136,11 @@
 
 /* ── Mobile nav ── */
 .mobile-nav {
-  inset-inline: 0.5rem;
-  width: auto;
+  right: 0.625rem !important;
+  left: 0.625rem !important;
+  width: auto !important;
   margin-bottom: 0.55rem;
+  background: rgba(var(--v-theme-surface), 0.56) !important;
   backdrop-filter: blur(10px);
 }
 
@@ -163,8 +151,9 @@
 /* ── Responsive ── */
 @media (max-width: 600px) {
   .topbar {
-    top: 0.45rem;
-    margin-top: 0.45rem;
+    --topbar-side-space: 0.625rem;
+
+    top: 0.45rem !important;
   }
 
   .main-shell {

@@ -1,17 +1,14 @@
 <template>
-  <v-container class="links-wrap py-6 py-md-9">
+  <v-container class="py-6 py-md-9" max-width="1080">
     <v-row class="mb-4" align="end">
-      <v-col cols="12" md="8">
+      <v-col cols="12">
         <h1 class="text-h4 font-weight-bold">Friendly Links</h1>
-      </v-col>
-      <v-col cols="12" md="4" class="d-flex justify-md-end">
-        <v-chip variant="tonal" prepend-icon="mdi-account-group">{{ links.length }} links</v-chip>
       </v-col>
     </v-row>
 
     <v-row>
       <v-col v-for="link in links" :key="link.title" cols="12" sm="6" lg="4">
-        <v-card class="h-100" color="surface" rounded="lg" elevation="6" border hover>
+        <v-card class="translucent-card h-100" color="surface" rounded="lg" elevation="6" border hover>
           <v-card-text class="pa-5 d-flex align-center ga-4">
             <v-avatar size="56">
               <v-img :src="link.avatar" :alt="link.title" />
@@ -93,7 +90,8 @@ const links = [
 </script>
 
 <style scoped>
-.links-wrap {
-  max-width: 1080px;
+.translucent-card {
+  background: rgba(var(--v-theme-surface), 0.72) !important;
+  backdrop-filter: blur(14px);
 }
 </style>
