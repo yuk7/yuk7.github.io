@@ -1,37 +1,27 @@
 # yuk7.dev
-
 My personal website.
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/yuk7/yuk7.github.io/build.yml?style=flat-square)
 ![License](https://img.shields.io/github/license/yuk7/yuk7.github.io.svg?style=flat-square)
 
 ## Environment
-
 ### Language
-
-- Vue
-- JavaScript
-- TypeScript
-
+* Vue
+* JavaScript
+* TypeScript
 ### Package Management
-
-- npm
-- dependabot
-
+* npm
+* dependabot
 ### Library and Frameworks
-
-- Vue 3
-- Vuetify 3 Alpha
-- Axios
-- lodash
-
+* Vue 3
+* Vuetify 3 Alpha
+* Axios
+* lodash
 ### Hosting and CI
-
-- GitHub Pages (main branch)
-- GitHub Actions
+* GitHub Pages (main branch)
+* GitHub Actions
 
 ## How to get started
-
 ```bash
 # Install dependencies
 npm install
@@ -44,7 +34,6 @@ npm run build
 ```
 
 ## Directory structures
-
 ```
 .
 |-.github
