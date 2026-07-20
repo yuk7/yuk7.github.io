@@ -24,7 +24,6 @@
     </v-app-bar>
 
     <v-main class="main-shell">
-      <ParticleSnowBackground id="background" class="d-none d-sm-flex" />
       <router-view class="page-content" />
     </v-main>
 
@@ -241,7 +240,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import ParticleSnowBackground from "@/components/ParticleSnowBackground.vue";
 
 const theme = ref<"light" | "dark">("light");
 
