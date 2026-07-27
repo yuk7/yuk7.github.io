@@ -86,6 +86,12 @@ const links = [
     avatar: "https://avatars.githubusercontent.com/u/64476715",
     domain: "jaycedotbin.github.io",
   },
+  {
+    title: "shiinasaku",
+    href: "https://shiina.xyz/",
+    avatar: "https://avatars.githubusercontent.com/u/228504405",
+    domain: "shiina.xyz",
+  },
 ];
 </script>
 
