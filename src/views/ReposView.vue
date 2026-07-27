@@ -95,7 +95,6 @@
         >
           <v-card-item>
             <v-card-title>{{ repo.name }}</v-card-title>
-            <v-card-subtitle>{{ formatDate(repo.updated_at) }}</v-card-subtitle>
           </v-card-item>
           <v-card-text class="flex-grow-1">{{
             repo.description ?? "No description provided."
